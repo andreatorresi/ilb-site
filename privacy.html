@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#0A0E1A" />
+
+<title>Privacy Policy — Interrogalabolletta</title>
+<meta name="description" content="Informativa privacy di Interrogalabolletta.it ex artt. 13-14 GDPR. Come trattiamo i tuoi dati, le basi giuridiche, i tuoi diritti." />
+<meta name="robots" content="noindex,follow" />
+<link rel="canonical" href="https://interrogalabolletta.it/privacy.html" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --notte: #0A0E1A;
+  --acciaio: #1B2845;
+  --acciaio-light: #243456;
+  --marker: #F4D03F;
+  --carta: #F5F5F0;
+  --testo-chiaro: #E5E7EB;
+  --testo-tenue: #9CA3AF;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --container: 900px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--testo-chiaro);
+  background: var(--notte);
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(27, 40, 69, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 40, 69, 0.4) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: radial-gradient(ellipse at top, black 30%, transparent 80%);
+}
+main, header, footer { position: relative; z-index: 1; }
+.container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+.site-header {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.site-header .container { display: flex; align-items: center; justify-content: space-between; }
+.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--carta);
+  text-decoration: none;
+}
+.logo em { color: var(--marker); font-style: normal; }
+.back-link {
+  font-size: 0.875rem;
+  color: var(--testo-tenue);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.back-link:hover { border-color: var(--marker); color: var(--carta); }
+
+.legal-hero {
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.legal-hero .kicker {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--marker);
+  margin-bottom: 1rem;
+}
+.legal-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--carta);
+  margin-bottom: 1rem;
+}
+.legal-hero .meta {
+  font-size: 0.875rem;
+  color: var(--testo-tenue);
+}
+.legal-hero .meta strong { color: var(--carta); }
+
+.legal-content {
+  padding: 3rem 0 5rem;
+}
+.legal-content h2 {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: var(--carta);
+  margin: 2.5rem 0 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.legal-content h2:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+.legal-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--carta);
+  margin: 1.5rem 0 0.75rem;
+}
+.legal-content p { margin-bottom: 1rem; }
+.legal-content ul, .legal-content ol {
+  margin: 0.5rem 0 1rem 1.5rem;
+}
+.legal-content li { margin-bottom: 0.5rem; }
+.legal-content a {
+  color: var(--marker);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(244, 208, 63, 0.3);
+  transition: border-color 0.2s;
+}
+.legal-content a:hover { border-color: var(--marker); }
+.legal-content strong { color: var(--carta); font-weight: 600; }
+.legal-content .callout {
+  background: rgba(27, 40, 69, 0.5);
+  border-left: 3px solid var(--marker);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.95rem;
+}
+.legal-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.9rem;
+}
+.legal-content th, .legal-content td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  vertical-align: top;
+}
+.legal-content th {
+  color: var(--carta);
+  font-weight: 600;
+  background: rgba(27, 40, 69, 0.3);
+}
+
+.site-footer {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 2rem 0;
+  font-size: 0.8rem;
+  color: var(--testo-tenue);
+}
+.site-footer p { margin-bottom: 0.5rem; }
+.site-footer a { color: var(--testo-chiaro); text-decoration: underline; text-decoration-color: rgba(255,255,255,0.2); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="/">Interroga<em>la</em>bolletta</a>
+    <a class="back-link" href="/">← Torna al sito</a>
+  </div>
+</header>
+
+<section class="legal-hero">
+  <div class="container">
+    <div class="kicker">Documento legale</div>
+    <h1>Informativa sul trattamento dei dati personali</h1>
+    <p class="meta">Resa ai sensi degli <strong>artt. 13 e 14 del Regolamento UE 2016/679</strong> (GDPR) e del <strong>D.Lgs. 196/2003</strong> come modificato dal D.Lgs. 101/2018.<br/>Ultimo aggiornamento: <strong>26 agosto 2026</strong> — Versione 1.0</p>
+  </div>
+</section>
+
+<main class="legal-content">
+  <div class="container">
+
+    <h2>1. Chi tratta i tuoi dati (Titolari del trattamento)</h2>
+    <p>Il servizio "Interrogalabolletta" è erogato in <strong>contitolarità del trattamento ex art. 26 GDPR</strong> dai seguenti soggetti:</p>
+
+    <table>
+      <tr>
+        <th>Torresi &amp; Associati S.r.l.</th>
+        <th>Operations S.r.l. (Gruppo Energia ®)</th>
+      </tr>
+      <tr>
+        <td>
+          Corso Umberto I, 161<br/>
+          62012 Civitanova Marche (MC)<br/>
+          P.IVA / C.F.: 02050980438<br/>
+          REA: MC-271193<br/>
+          PEC: <a href="mailto:torresieassociatisrl@pec.it">torresieassociatisrl@pec.it</a>
+        </td>
+        <td>
+          Sede legale: [in aggiornamento]<br/>
+          P.IVA: 02725490417<br/>
+          PEC: [in aggiornamento]<br/>
+          Sito: <a href="https://gruppoenergia.it" target="_blank" rel="noopener">gruppoenergia.it</a>
+        </td>
+      </tr>
+    </table>
+
+    <p>Le rispettive responsabilità e i punti di contatto sono definiti in un <strong>Accordo di Contitolarità</strong> il cui contenuto essenziale è disponibile su richiesta scrivendo a <a href="mailto:privacy@interrogalabolletta.it">privacy@interrogalabolletta.it</a>.</p>
+
+    <div class="callout">
+      <strong>Punto di contatto unico verso gli interessati:</strong> per l'esercizio di qualsiasi diritto o richiesta relativa al trattamento dei tuoi dati, puoi rivolgerti a <strong>Torresi &amp; Associati S.r.l.</strong> all'indirizzo <a href="mailto:privacy@interrogalabolletta.it">privacy@interrogalabolletta.it</a>. La richiesta verrà evasa dal contitolare competente in base alla fase del trattamento cui si riferisce.
+    </div>
+
+    <h2>2. Responsabile della Protezione dei Dati (RPD/DPO)</h2>
+    <p>Alla data di aggiornamento della presente informativa, non ricorrono i presupposti che rendono obbligatoria la nomina di un Responsabile della Protezione dei Dati ex art. 37, paragrafo 1, del GDPR. Il coordinamento operativo delle attività di conformità privacy è svolto dal <strong>Referente Privacy Congiunto</strong> nella persona di Andrea Torresi, contattabile all'indirizzo <a href="mailto:privacy@interrogalabolletta.it">privacy@interrogalabolletta.it</a>.</p>
+    <p>La necessità di procedere alla nomina formale del DPO è oggetto di rivalutazione annuale al variare della scala e delle caratteristiche del trattamento.</p>
+
+    <h2>3. Quali dati trattiamo</h2>
+    <p>Nell'ambito dell'erogazione del servizio Interrogalabolletta trattiamo le seguenti categorie di dati:</p>
+    <ul>
+      <li><strong>Dati identificativi e di contatto:</strong> ragione sociale, partita IVA, referente aziendale, ruolo, email, telefono.</li>
+      <li><strong>Dati aziendali:</strong> settore di attività, fascia di consumo energetico annuo, note operative fornite volontariamente.</li>
+      <li><strong>Dati contenuti nella bolletta caricata:</strong> POD (Punto di Prelievo), PDR (Punto di Riconsegna), consumi in kWh/Smc, potenza contrattuale, importi fatturati, componenti tariffarie, dati del venditore e del distributore, periodi di fatturazione.</li>
+      <li><strong>Dati di navigazione:</strong> indirizzo IP (anonimizzato), tipo di browser, sistema operativo, timestamp di accesso — trattati per finalità tecniche e di sicurezza.</li>
+    </ul>
+    <p>Non trattiamo <strong>categorie particolari di dati personali</strong> ex art. 9 GDPR. Ove il file caricato dovesse contenere accidentalmente dati non pertinenti, questi verranno prontamente cancellati.</p>
+
+    <h2>4. Perché li trattiamo (finalità e basi giuridiche)</h2>
+    <table>
+      <tr>
+        <th>Finalità</th>
+        <th>Base giuridica</th>
+        <th>Conservazione</th>
+      </tr>
+      <tr>
+        <td>Erogazione del servizio First Check Bolletta (analisi tecnica gratuita della bolletta caricata)</td>
+        <td>Art. 6(1)(b) GDPR — esecuzione di misure precontrattuali su tua richiesta</td>
+        <td>24 mesi dalla chiusura del check</td>
+      </tr>
+      <tr>
+        <td>Erogazione del Report di verifica completo (a seguito di sottoscrizione dell'offerta)</td>
+        <td>Art. 6(1)(b) GDPR — esecuzione del contratto</td>
+        <td>Durata contratto + 10 anni ex art. 2220 c.c.</td>
+      </tr>
+      <tr>
+        <td>Adempimenti fiscali, contabili, di conservazione documentale</td>
+        <td>Art. 6(1)(c) GDPR — obbligo legale</td>
+        <td>10 anni ex art. 2220 c.c. e artt. 22, 39 DPR 600/1973</td>
+      </tr>
+      <tr>
+        <td>Comunicazioni commerciali e marketing di Gruppo Energia ® e Torresi &amp; Associati S.r.l.</td>
+        <td>Art. 6(1)(a) GDPR — tuo consenso esplicito (checkbox facoltativa nel form)</td>
+        <td>Fino a revoca del consenso, revisione biennale</td>
+      </tr>
+      <tr>
+        <td>Difesa in giudizio, gestione contestazioni, prevenzione frodi</td>
+        <td>Art. 6(1)(f) GDPR — legittimo interesse</td>
+        <td>5 anni dalla chiusura del rapporto o dall'evento contestato</td>
+      </tr>
+      <tr>
+        <td>Sicurezza tecnica, log applicativi, prevenzione abusi</td>
+        <td>Art. 6(1)(f) GDPR — legittimo interesse</td>
+        <td>12 mesi</td>
+      </tr>
+    </table>
+
+    <h2>5. Trasparenza sulle finalità commerciali</h2>
+    <div class="callout">
+      Il First Check Bolletta è un'analisi tecnica indipendente dal fornitore di energia attualmente in essere. Se dall'analisi emerge che <strong>Gruppo Energia ® può proporti condizioni di fornitura più convenienti rispetto al tuo profilo di consumo</strong>, tale proposta ti sarà comunicata in modo esplicito e separato. <strong>La proposta commerciale non è la condizione per accedere all'analisi</strong> e sei libero di valutarla o rifiutarla senza che ciò incida sulla validità o completezza del check ricevuto.
+    </div>
+
+    <h2>6. A chi comunichiamo i dati (destinatari)</h2>
+    <p>I tuoi dati possono essere comunicati alle seguenti categorie di destinatari, ciascuno nei limiti e per le finalità di competenza:</p>
+    <ul>
+      <li><strong>Personale autorizzato</strong> di Torresi &amp; Associati S.r.l. e di Operations S.r.l. (Gruppo Energia ®), formalmente designato al trattamento ex art. 29 GDPR e art. 2-quaterdecies D.Lgs. 196/2003.</li>
+      <li><strong>Responsabili del trattamento esterni</strong> nominati ex art. 28 GDPR, tra cui: fornitore di hosting web (Cloudflare Inc., dati elaborati in UE), provider di orchestrazione flussi (n8n), provider di posta transazionale (Resend), fornitori tecnici specializzati di Gruppo Energia ® per l'analisi dei dati energetici.</li>
+      <li><strong>Consulenti professionali</strong> (commercialisti, avvocati, revisori) vincolati da segreto professionale, per adempimenti di legge o esigenze difensive.</li>
+      <li><strong>Autorità pubbliche</strong> (Garante Privacy, ARERA, AdE, Guardia di Finanza, Autorità Giudiziaria) qualora richiesto da obblighi di legge o provvedimenti dell'Autorità.</li>
+    </ul>
+    <p>I tuoi dati <strong>non sono oggetto di diffusione</strong> e non vengono comunicati a soggetti terzi per finalità autonome di marketing.</p>
+
+    <h2>7. Trasferimenti di dati extra-UE</h2>
+    <p>I dati sono trattati in via primaria all'interno dello Spazio Economico Europeo (SEE). Ove alcuni fornitori tecnici (in particolare per servizi di hosting o email transazionale) dovessero operare infrastrutture o data center fuori dall'UE, il trasferimento è garantito da uno dei seguenti meccanismi di adeguatezza:</p>
+    <ul>
+      <li><strong>Decisioni di adeguatezza</strong> della Commissione europea ex art. 45 GDPR;</li>
+      <li><strong>Clausole Contrattuali Standard</strong> (SCC) approvate dalla Commissione europea con Decisione 2021/914/UE ex art. 46 GDPR;</li>
+      <li>ove necessario, misure supplementari (crittografia, pseudonimizzazione) ex Sentenza CJEU C-311/18 "Schrems II".</li>
+    </ul>
+
+    <h2>8. Come proteggiamo i tuoi dati</h2>
+    <p>Adottiamo misure tecniche e organizzative adeguate al livello di rischio ex art. 32 GDPR, tra cui: cifratura in transito (TLS 1.2+) e a riposo, controllo degli accessi basato su ruoli, autenticazione a due fattori sui sistemi critici, backup cifrati con retention definita, logging degli accessi, formazione periodica del personale autorizzato, procedura formalizzata di gestione data breach con SLA interno di 24 ore per la notifica reciproca tra contitolari.</p>
+
+    <h2>9. Decisioni automatizzate e utilizzo di intelligenza artificiale</h2>
+    <p>Il servizio First Check può prevedere <strong>l'utilizzo di sistemi di intelligenza artificiale</strong> (in particolare Large Language Model e sistemi di estrazione automatica di dati strutturati da documenti) per il supporto all'analisi preliminare della bolletta caricata. Tali sistemi <strong>non producono decisioni automatizzate ex art. 22 GDPR</strong> in quanto ogni output è sottoposto a validazione umana da parte dei tecnici certificati di Gruppo Energia ® e dei professionisti di Torresi &amp; Associati S.r.l. prima di essere comunicato all'interessato.</p>
+    <p>L'utilizzo di sistemi di intelligenza artificiale è dichiarato in ottemperanza agli <strong>obblighi di trasparenza previsti dall'art. 50 del Regolamento UE 2024/1689</strong> ("AI Act").</p>
+
+    <h2>10. I tuoi diritti (artt. 15-22 GDPR)</h2>
+    <p>In qualità di interessato, hai il diritto di:</p>
+    <ul>
+      <li><strong>Accedere</strong> ai tuoi dati e ottenerne copia (art. 15);</li>
+      <li>Chiederne la <strong>rettifica</strong> se inesatti o incompleti (art. 16);</li>
+      <li>Chiederne la <strong>cancellazione</strong> ("diritto all'oblio") nei casi previsti (art. 17);</li>
+      <li>Chiederne la <strong>limitazione</strong> del trattamento (art. 18);</li>
+      <li>Ricevere i tuoi dati in un formato strutturato e trasferirli ad altro titolare (<strong>portabilità</strong>, art. 20);</li>
+      <li><strong>Opporti</strong> al trattamento fondato su legittimo interesse o effettuato per marketing diretto (art. 21);</li>
+      <li>Non essere sottoposto a decisioni basate unicamente su trattamento automatizzato (art. 22);</li>
+      <li><strong>Revocare in qualsiasi momento</strong> i consensi prestati (art. 7), senza pregiudicare la liceità dei trattamenti effettuati prima della revoca.</li>
+    </ul>
+    <p>Per esercitare i tuoi diritti scrivi a <a href="mailto:privacy@interrogalabolletta.it">privacy@interrogalabolletta.it</a>. La risposta verrà fornita entro 30 giorni ex art. 12(3) GDPR, prorogabili di ulteriori 60 giorni in caso di richieste complesse.</p>
+
+    <h2>11. Diritto di reclamo al Garante</h2>
+    <p>Fatta salva ogni altra forma di ricorso amministrativo o giurisdizionale, hai il diritto di proporre reclamo al <strong>Garante per la protezione dei dati personali</strong> (Piazza Venezia 11, 00187 Roma — <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">www.garanteprivacy.it</a>) se ritieni che il trattamento dei tuoi dati violi il GDPR o la normativa applicabile.</p>
+
+    <h2>12. Natura del conferimento e conseguenze del rifiuto</h2>
+    <p>Il conferimento dei dati richiesti per l'erogazione del First Check (identificativi, aziendali, dati bolletta) è <strong>necessario</strong> per l'esecuzione del servizio: un eventuale rifiuto rende impossibile completare l'analisi. Il conferimento del consenso alle comunicazioni commerciali è <strong>facoltativo</strong> e la sua mancata prestazione non pregiudica l'erogazione del servizio.</p>
+
+    <h2>13. Modifiche a questa informativa</h2>
+    <p>La presente informativa è soggetta a revisione periodica per adeguamento normativo o evolutivo del servizio. Le modifiche verranno pubblicate su questa pagina con indicazione della data di ultimo aggiornamento e, ove sostanziali, comunicate agli utenti attivi via email.</p>
+
+    <p style="margin-top: 3rem; font-size: 0.85rem; color: var(--testo-tenue);">Documento redatto in versione 1.0 il 26 agosto 2026. Per la Cookie Policy vedi <a href="/cookie.html">questa pagina</a>. Per i Termini di servizio vedi <a href="/termini.html">questa pagina</a>.</p>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p><strong>Interrogalabolletta.it</strong> — Servizio erogato da Gruppo Energia ® (Operations S.r.l., P.IVA 02725490417) in collaborazione con Torresi &amp; Associati S.r.l. (P.IVA 02050980438, Corso Umberto I 161, 62012 Civitanova Marche MC — REA MC-271193).</p>
+    <p>© 2026 — <a href="/">Torna al sito</a> · <a href="/cookie.html">Cookie Policy</a> · <a href="/termini.html">Termini di servizio</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

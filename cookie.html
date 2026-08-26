@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#0A0E1A" />
+
+<title>Cookie Policy — Interrogalabolletta</title>
+<meta name="description" content="Cookie Policy di Interrogalabolletta.it. Quali cookie utilizziamo, per quali finalità, come gestire le preferenze." />
+<meta name="robots" content="noindex,follow" />
+<link rel="canonical" href="https://interrogalabolletta.it/cookie.html" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --notte: #0A0E1A;
+  --acciaio: #1B2845;
+  --marker: #F4D03F;
+  --carta: #F5F5F0;
+  --testo-chiaro: #E5E7EB;
+  --testo-tenue: #9CA3AF;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --container: 900px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--testo-chiaro);
+  background: var(--notte);
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(27, 40, 69, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 40, 69, 0.4) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: radial-gradient(ellipse at top, black 30%, transparent 80%);
+}
+main, header, footer { position: relative; z-index: 1; }
+.container { max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+.site-header {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.site-header .container { display: flex; align-items: center; justify-content: space-between; }
+.logo { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: var(--carta); text-decoration: none; }
+.logo em { color: var(--marker); font-style: normal; }
+.back-link { font-size: 0.875rem; color: var(--testo-tenue); text-decoration: none; border-bottom: 1px solid transparent; }
+.back-link:hover { border-color: var(--marker); color: var(--carta); }
+
+.legal-hero { padding: 4rem 0 3rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.legal-hero .kicker { font-family: var(--font-display); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--marker); margin-bottom: 1rem; }
+.legal-hero h1 { font-family: var(--font-display); font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700; line-height: 1.2; color: var(--carta); margin-bottom: 1rem; }
+.legal-hero .meta { font-size: 0.875rem; color: var(--testo-tenue); }
+.legal-hero .meta strong { color: var(--carta); }
+
+.legal-content { padding: 3rem 0 5rem; }
+.legal-content h2 { font-family: var(--font-display); font-size: 1.375rem; font-weight: 600; color: var(--carta); margin: 2.5rem 0 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.06); }
+.legal-content h2:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+.legal-content h3 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; color: var(--carta); margin: 1.5rem 0 0.75rem; }
+.legal-content p { margin-bottom: 1rem; }
+.legal-content ul { margin: 0.5rem 0 1rem 1.5rem; }
+.legal-content li { margin-bottom: 0.5rem; }
+.legal-content a { color: var(--marker); text-decoration: none; border-bottom: 1px solid rgba(244, 208, 63, 0.3); }
+.legal-content a:hover { border-color: var(--marker); }
+.legal-content strong { color: var(--carta); font-weight: 600; }
+.legal-content .callout { background: rgba(27, 40, 69, 0.5); border-left: 3px solid var(--marker); padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 4px 4px 0; font-size: 0.95rem; }
+.legal-content table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: 0.9rem; }
+.legal-content th, .legal-content td { padding: 0.75rem; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); vertical-align: top; }
+.legal-content th { color: var(--carta); font-weight: 600; background: rgba(27, 40, 69, 0.3); }
+.btn-preferenze {
+  display: inline-block;
+  background: var(--marker);
+  color: var(--notte);
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.btn-preferenze:hover { transform: translateY(-1px); }
+
+.site-footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 2rem 0; font-size: 0.8rem; color: var(--testo-tenue); }
+.site-footer p { margin-bottom: 0.5rem; }
+.site-footer a { color: var(--testo-chiaro); text-decoration: underline; text-decoration-color: rgba(255,255,255,0.2); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="/">Interroga<em>la</em>bolletta</a>
+    <a class="back-link" href="/">← Torna al sito</a>
+  </div>
+</header>
+
+<section class="legal-hero">
+  <div class="container">
+    <div class="kicker">Documento legale</div>
+    <h1>Cookie Policy</h1>
+    <p class="meta">Ai sensi del <strong>Provvedimento del Garante Privacy n. 231 del 10 giugno 2021</strong>, del <strong>D.Lgs. 196/2003</strong> e degli <strong>artt. 13-14 GDPR</strong>.<br/>Ultimo aggiornamento: <strong>26 agosto 2026</strong> — Versione 1.0</p>
+  </div>
+</section>
+
+<main class="legal-content">
+  <div class="container">
+
+    <h2>1. Cosa sono i cookie</h2>
+    <p>I <strong>cookie</strong> sono piccoli file di testo che i siti web visitati inviano al terminale dell'utente, dove vengono memorizzati per essere ritrasmessi agli stessi siti alla successiva visita. Assolvono a diverse funzioni: consentono il corretto funzionamento tecnico del sito, raccolgono informazioni statistiche sulla navigazione, permettono l'erogazione di contenuti personalizzati.</p>
+    <p>Analoghe considerazioni valgono per altri strumenti di tracciamento come <strong>pixel invisibili, local storage, session storage, fingerprinting</strong>, che nella presente informativa sono trattati unitariamente sotto l'etichetta "cookie" per semplicità espositiva.</p>
+
+    <h2>2. Cookie utilizzati da Interrogalabolletta.it</h2>
+    <p>Il sito utilizza esclusivamente le seguenti categorie di cookie:</p>
+
+    <h3>2.1 Cookie tecnici (sempre attivi)</h3>
+    <p>Necessari al funzionamento tecnico del sito e per l'erogazione dei servizi richiesti dall'utente. Non richiedono consenso ex art. 122 D.Lgs. 196/2003.</p>
+    <table>
+      <tr>
+        <th>Cookie</th>
+        <th>Provider</th>
+        <th>Finalità</th>
+        <th>Durata</th>
+      </tr>
+      <tr>
+        <td>__cf_bm</td>
+        <td>Cloudflare</td>
+        <td>Bot management e sicurezza applicativa</td>
+        <td>30 minuti</td>
+      </tr>
+      <tr>
+        <td>cf_clearance</td>
+        <td>Cloudflare</td>
+        <td>Verifica accesso legittimo al sito (challenge)</td>
+        <td>30 giorni</td>
+      </tr>
+      <tr>
+        <td>ilb_consent</td>
+        <td>Interrogalabolletta</td>
+        <td>Memorizzazione preferenze utente su cookie non tecnici</td>
+        <td>6 mesi</td>
+      </tr>
+    </table>
+
+    <h3>2.2 Cookie analitici (richiedono consenso)</h3>
+    <p>Alla data attuale il sito <strong>non utilizza cookie analitici di terze parti</strong> (es. Google Analytics, Meta Pixel). Qualora tali strumenti venissero introdotti in futuro, la presente Cookie Policy verrà aggiornata e sarà richiesto un nuovo consenso all'utente.</p>
+
+    <h3>2.3 Cookie di profilazione e marketing (richiedono consenso)</h3>
+    <p>Alla data attuale il sito <strong>non utilizza cookie di profilazione o marketing</strong>. Non tracciamo l'utente per finalità pubblicitarie, non condividiamo dati di navigazione con circuiti advertising, non utilizziamo tecnologie di retargeting.</p>
+
+    <h3>2.4 Font e risorse esterne</h3>
+    <p>Il sito carica i font tipografici tramite il servizio <strong>Google Fonts</strong>. Il caricamento avviene con connessione crittografata (HTTPS) verso i server Google e non comporta la memorizzazione di cookie sul dispositivo dell'utente, ma la trasmissione dell'indirizzo IP a Google LLC. Tale trattamento è basato sul legittimo interesse ex art. 6(1)(f) GDPR alla resa grafica del sito. Su richiesta dell'utente valuteremo l'implementazione del caricamento self-hosted dei font per eliminare tale trasferimento.</p>
+
+    <h2>3. Come gestire il consenso</h2>
+    <p>Alla prima visita del sito viene mostrato un <strong>cookie banner</strong> che consente di:</p>
+    <ul>
+      <li><strong>Accettare tutti</strong> i cookie non tecnici;</li>
+      <li><strong>Rifiutare tutti</strong> i cookie non tecnici;</li>
+      <li><strong>Personalizzare</strong> le scelte per singola categoria.</li>
+    </ul>
+    <p>La chiusura del banner tramite la "X" o il click al di fuori dell'area del banner <strong>equivale al rifiuto</strong> dei cookie non tecnici, in linea con il Provv. Garante 231/2021.</p>
+    <p>Puoi modificare le tue preferenze in qualsiasi momento cliccando qui:</p>
+    <p><a class="btn-preferenze" href="javascript:void(0)" onclick="if(window.ilbReopenConsent){window.ilbReopenConsent()}else{alert('Aggiorna la pagina per gestire le preferenze cookie.')}">Gestisci preferenze cookie</a></p>
+
+    <h2>4. Come disabilitare i cookie dal browser</h2>
+    <p>Indipendentemente dal banner presente sul sito, puoi in ogni momento configurare il tuo browser per bloccare, cancellare o ricevere una notifica per ciascun cookie. Le istruzioni ufficiali per i principali browser:</p>
+    <ul>
+      <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+      <li><a href="https://support.mozilla.org/it/kb/protezione-antitracciamento-avanzata-firefox-desktop" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+      <li><a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Apple Safari</a></li>
+      <li><a href="https://support.microsoft.com/it-it/microsoft-edge/eliminare-i-cookie-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener">Microsoft Edge</a></li>
+    </ul>
+
+    <div class="callout">
+      <strong>Attenzione:</strong> disabilitando i cookie tecnici alcune funzionalità del sito potrebbero non funzionare correttamente. La disabilitazione dei cookie di terze parti non impedisce comunque la navigazione.
+    </div>
+
+    <h2>5. Titolari del trattamento e contatti</h2>
+    <p>Il servizio Interrogalabolletta è erogato in <strong>contitolarità del trattamento ex art. 26 GDPR</strong> da <strong>Torresi &amp; Associati S.r.l.</strong> (P.IVA 02050980438) e <strong>Operations S.r.l. — Gruppo Energia ®</strong> (P.IVA 02725490417). Per ogni informazione, richiesta o esercizio dei diritti previsti dagli artt. 15-22 GDPR puoi scrivere a <a href="mailto:privacy@interrogalabolletta.it">privacy@interrogalabolletta.it</a>.</p>
+    <p>Per tutti gli altri dettagli sul trattamento dei tuoi dati personali consulta la <a href="/privacy.html">Privacy Policy</a>.</p>
+
+    <h2>6. Modifiche a questa Cookie Policy</h2>
+    <p>La presente policy è aggiornata al 26 agosto 2026. Eventuali modifiche verranno pubblicate su questa pagina; in caso di modifiche sostanziali il banner di consenso verrà nuovamente proposto agli utenti già visitatori del sito.</p>
+
+    <p style="margin-top: 3rem; font-size: 0.85rem; color: var(--testo-tenue);">Vedi anche: <a href="/privacy.html">Privacy Policy</a> · <a href="/termini.html">Termini di servizio</a></p>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p><strong>Interrogalabolletta.it</strong> — Servizio erogato da Gruppo Energia ® (Operations S.r.l., P.IVA 02725490417) in collaborazione con Torresi &amp; Associati S.r.l. (P.IVA 02050980438, Corso Umberto I 161, 62012 Civitanova Marche MC — REA MC-271193).</p>
+    <p>© 2026 — <a href="/">Torna al sito</a> · <a href="/privacy.html">Privacy Policy</a> · <a href="/termini.html">Termini di servizio</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1915 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#0A0E1A" />
+
+<title>Interrogalabolletta — Verifica Decreto Bollette 2026 per la tua azienda</title>
+<meta name="description" content="La tua bolletta sembra corretta? Finché qualcuno non la interroga. Verifichiamo gratis se il Decreto Bollette 2026 è applicato correttamente alla tua azienda. In 48 ore." />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://interrogalabolletta.it/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Interrogalabolletta — Verifica Decreto Bollette 2026" />
+<meta property="og:description" content="La tua bolletta sembra corretta. Finché qualcuno non la interroga. Verifica gratuita del Decreto Bollette 2026 per la tua azienda." />
+<meta property="og:url" content="https://interrogalabolletta.it" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:site_name" content="Interrogalabolletta" />
+<meta property="og:image" content="https://interrogalabolletta.it/assets/og-cover.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Interrogalabolletta — Verifica Decreto Bollette 2026" />
+<meta name="twitter:description" content="Carica una bolletta. In 48 ore verifichiamo se il Decreto Bollette 2026 ti è applicato correttamente." />
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "First Check Bolletta",
+  "description": "Verifica tecnico-fiscale delle bollette energetiche per imprese italiane. Analisi indipendente su consumi, potenza, contratto, applicazione del Decreto Bollette 2026 e fatturazione a quarti d'ora (MTU15).",
+  "url": "https://interrogalabolletta.it",
+  "provider": [
+    {
+      "@type": "Organization",
+      "name": "Gruppo Energia",
+      "legalName": "Operations S.r.l.",
+      "url": "https://gruppoenergia.it",
+      "taxID": "02725490417",
+      "telephone": "+39 0721 429238"
+    },
+    {
+      "@type": "AccountingService",
+      "name": "Torresi & Associati S.r.l.",
+      "url": "https://interrogalabolletta.it",
+      "taxID": "02050980438",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Corso Umberto I 161",
+        "postalCode": "62012",
+        "addressLocality": "Civitanova Marche",
+        "addressRegion": "MC",
+        "addressCountry": "IT"
+      }
+    }
+  ],
+  "areaServed": "IT",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "description": "First Check gratuito entro 48 ore lavorative"
+  }
+}
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================
+   DESIGN TOKENS
+   ============================================ */
+:root {
+  /* palette */
+  --notte: #0A0E1A;
+  --acciaio: #1B2845;
+  --acciaio-light: #243456;
+  --marker: #F4D03F;
+  --marker-soft: rgba(244, 208, 63, 0.18);
+  --rosso: #E74C3C;
+  --carta: #F5F5F0;
+  --carta-shade: #E8E7DD;
+  --verde: #0D7F5A;
+  --testo-chiaro: #E5E7EB;
+  --testo-tenue: #9CA3AF;
+  --testo-scuro: #1F2937;
+
+  /* type */
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+
+  /* spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* radius */
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 14px;
+
+  /* container */
+  --container: 1180px;
+}
+
+/* ============================================
+   RESET
+   ============================================ */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: clip; /* non rompe position:sticky come overflow:hidden */
+}
+body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--testo-chiaro);
+  background: var(--notte);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  min-height: 100dvh; /* dynamic viewport unit per gestire la barra browser mobile */
+}
+img, svg { max-width: 100%; display: block; }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+input, textarea, select { font: inherit; color: inherit; }
+a { color: inherit; text-decoration: none; }
+
+/* ============================================
+   ATMOSFERA: pattern di sfondo a circuiti
+   ============================================ */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(27, 40, 69, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 40, 69, 0.4) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: radial-gradient(ellipse at top, black 30%, transparent 80%);
+}
+
+main, header, footer { position: relative; z-index: 1; }
+
+/* ============================================
+   CONTAINER
+   ============================================ */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  padding-left: max(var(--space-6), env(safe-area-inset-left));
+  padding-right: max(var(--space-6), env(safe-area-inset-right));
+}
+
+/* fix grid blowout: gli item devono poter contrarsi */
+.hero-grid > *,
+.cards-grid > *,
+.offer-deal > *,
+.authority > *,
+.footer-grid > * {
+  min-width: 0;
+}
+
+/* ============================================
+   HEADER / NAV
+   ============================================ */
+.site-header {
+  padding: var(--space-6) 0;
+  padding-top: max(var(--space-6), env(safe-area-inset-top));
+  position: sticky;
+  top: 0;
+  background: rgba(10, 14, 26, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 50;
+  border-bottom: 1px solid rgba(244, 208, 63, 0.08);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; }
+.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.logo-mark {
+  width: 32px; height: 32px;
+  background: var(--marker);
+  display: grid; place-items: center;
+  border-radius: 4px;
+  color: var(--notte);
+  font-weight: 900;
+  font-family: var(--font-display);
+}
+.nav-cta {
+  background: var(--marker);
+  color: var(--notte);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--r-md);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform 0.15s ease;
+}
+.nav-cta:hover { transform: translateY(-1px); }
+
+/* ============================================
+   ELEMENTO STRUTTURALE: VOCE
+   le sezioni sono numerate come voci di bolletta
+   ============================================ */
+.voce {
+  padding: var(--space-24) 0;
+  position: relative;
+}
+.voce-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  color: var(--marker);
+  text-transform: uppercase;
+  margin-bottom: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.voce-eyebrow::before {
+  content: "";
+  width: 32px;
+  height: 1px;
+  background: var(--marker);
+}
+
+.voce-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  margin-bottom: var(--space-6);
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+.voce-title em {
+  font-style: normal;
+  background: linear-gradient(180deg, transparent 60%, var(--marker-soft) 60%, var(--marker-soft) 92%, transparent 92%);
+}
+
+.voce-lead {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--testo-tenue);
+  max-width: 56ch;
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-20);
+  position: relative;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6.5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
+  margin-bottom: var(--space-8);
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+.hero h1 em {
+  font-style: normal;
+  position: relative;
+  display: inline-block;
+}
+.hero h1 em::after {
+  content: "";
+  position: absolute;
+  left: -4px; right: -4px; bottom: 4%;
+  height: 28%;
+  background: var(--marker);
+  z-index: -1;
+  transform: rotate(-0.6deg);
+}
+
+.hero-sub {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--testo-tenue);
+  margin-bottom: var(--space-8);
+  max-width: 50ch;
+}
+
+.hero-data {
+  display: flex;
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+  font-family: var(--font-mono);
+}
+.hero-data-item {
+  border-left: 2px solid var(--marker);
+  padding-left: var(--space-4);
+}
+.hero-data-value {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: white;
+}
+.hero-data-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--testo-tenue);
+  margin-top: 2px;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   QUICK UPLOAD nella hero (lead capture immediato)
+   ============================================ */
+.quick-upload {
+  margin-top: var(--space-8);
+  background: rgba(36, 52, 86, 0.5);
+  border: 1px solid rgba(244, 208, 63, 0.25);
+  border-radius: var(--r-lg);
+  padding: var(--space-6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.quick-upload-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.quick-upload-title::before {
+  content: "⚡";
+  color: var(--marker);
+  font-size: 1.2rem;
+}
+.quick-dropzone {
+  display: block;
+  border: 2px dashed rgba(244, 208, 63, 0.4);
+  border-radius: var(--r-md);
+  padding: var(--space-6);
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  margin-bottom: var(--space-3);
+}
+.quick-dropzone:hover, .quick-dropzone.drag {
+  border-color: var(--marker);
+  background: rgba(244, 208, 63, 0.06);
+}
+.quick-dropzone input[type="file"] {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  cursor: pointer;
+}
+.quick-dropzone-text {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+.quick-dropzone-hint {
+  font-size: 0.82rem;
+  color: var(--testo-tenue);
+}
+.quick-dropzone.has-file {
+  border-color: var(--verde);
+  background: rgba(13, 127, 90, 0.08);
+}
+.quick-dropzone.has-file .quick-dropzone-text { color: #4ade80; }
+.quick-email {
+  width: 100%;
+  background: rgba(10, 14, 26, 0.6);
+  border: 1px solid rgba(229, 231, 235, 0.15);
+  border-radius: var(--r-md);
+  padding: var(--space-4);
+  font-size: 1rem;
+  color: var(--testo-chiaro);
+  font-family: var(--font-body);
+  margin-bottom: var(--space-3);
+}
+.quick-email:focus {
+  outline: none;
+  border-color: var(--marker);
+}
+.quick-submit {
+  width: 100%;
+  background: var(--marker);
+  color: var(--notte);
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--r-md);
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: var(--font-display);
+  letter-spacing: -0.005em;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.quick-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(244, 208, 63, 0.3);
+}
+.quick-footnote {
+  display: block;
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--testo-tenue);
+  margin-top: var(--space-3);
+}
+
+/* ============================================
+   SEZIONE STORYTELLING
+   ============================================ */
+.story-section {
+  background: linear-gradient(180deg, var(--notte) 0%, rgba(36, 52, 86, 0.5) 100%);
+}
+.story-block {
+  max-width: 740px;
+  margin: 0 auto;
+}
+.story-block p {
+  font-size: 1.12rem;
+  line-height: 1.75;
+  margin-bottom: var(--space-6);
+  color: var(--testo-chiaro);
+}
+.story-block p.tenue {
+  color: var(--testo-tenue);
+}
+.story-quotes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin: var(--space-8) 0;
+  padding-left: var(--space-6);
+  border-left: 3px solid var(--marker);
+}
+.story-quotes blockquote {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: white;
+  letter-spacing: -0.015em;
+}
+.story-quotes blockquote::before { content: '"'; color: var(--marker); margin-right: 4px; }
+.story-quotes blockquote::after { content: '"'; color: var(--marker); margin-left: 4px; }
+
+.story-metaphor {
+  background: rgba(231, 76, 60, 0.08);
+  border-left: 3px solid var(--rosso);
+  border-radius: var(--r-md);
+  padding: var(--space-6);
+  margin: var(--space-8) 0;
+}
+.story-metaphor-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: var(--space-3);
+  color: white;
+}
+.story-list {
+  list-style: none;
+  margin: var(--space-6) 0;
+}
+.story-list li {
+  position: relative;
+  padding-left: var(--space-6);
+  margin-bottom: var(--space-3);
+  color: var(--testo-tenue);
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+.story-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--marker);
+  font-weight: 700;
+}
+
+.btn-primary {
+  background: var(--marker);
+  color: var(--notte);
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--r-md);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(244, 208, 63, 0.25);
+}
+.btn-primary svg { transition: transform 0.2s ease; }
+.btn-primary:hover svg { transform: translateX(3px); }
+
+.btn-ghost {
+  border: 1px solid rgba(229, 231, 235, 0.2);
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--r-md);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: border-color 0.15s ease;
+}
+.btn-ghost:hover { border-color: var(--testo-chiaro); }
+
+/* ============================================
+   SIGNATURE ELEMENT: bolletta annotata
+   ============================================ */
+.bolletta-mock {
+  background: var(--carta);
+  color: var(--testo-scuro);
+  border-radius: var(--r-lg);
+  padding: var(--space-8) var(--space-6);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  position: relative;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4), 0 4px 12px rgba(0,0,0,0.2);
+  transform: rotate(0.6deg);
+}
+
+.bolletta-mock::before {
+  content: "FATTURA ELETTRICA — N. 2026/445218";
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  border-bottom: 1px solid var(--carta-shade);
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.bolletta-row {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-2) 0;
+  border-bottom: 1px dashed var(--carta-shade);
+  position: relative;
+}
+.bolletta-row:last-child { border-bottom: none; }
+.bolletta-label { color: #4b5563; }
+.bolletta-value { font-weight: 600; }
+
+.bolletta-row.totale {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 2px solid var(--testo-scuro);
+  border-bottom: none;
+  font-size: 0.95rem;
+}
+
+/* annotazioni marker su voci sospette */
+.annotazione {
+  position: absolute;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--rosso);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  transform: rotate(-2deg);
+  pointer-events: none;
+}
+.annotazione::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--rosso);
+}
+.annotazione-1 {
+  top: 38%;
+  right: -130px;
+  width: 130px;
+}
+.annotazione-2 {
+  top: 56%;
+  right: -130px;
+  width: 130px;
+}
+
+.bolletta-row.evidenziata::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--marker);
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  border-radius: 2px;
+}
+
+/* ============================================
+   VOCE 02: COSA CONTROLLIAMO (4 card)
+   ============================================ */
+.voce-bg-acciaio {
+  background: linear-gradient(180deg, var(--notte) 0%, var(--acciaio) 100%);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+}
+.card {
+  background: rgba(36, 52, 86, 0.4);
+  border: 1px solid rgba(244, 208, 63, 0.1);
+  border-radius: var(--r-lg);
+  padding: var(--space-6);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(244, 208, 63, 0.3);
+}
+.card-num {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--marker);
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-4);
+}
+.card-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: var(--space-3);
+  line-height: 1.2;
+}
+.card-body {
+  font-size: 0.95rem;
+  color: var(--testo-tenue);
+  line-height: 1.55;
+}
+
+/* ============================================
+   VOCE 03: OFFER BOX (Hormozi grand slam)
+   ============================================ */
+.offer-wrap {
+  background: var(--carta);
+  color: var(--testo-scuro);
+  margin: var(--space-12) 0;
+}
+.offer-wrap .voce-eyebrow { color: var(--rosso); }
+.offer-wrap .voce-eyebrow::before { background: var(--rosso); }
+.offer-wrap .voce-title em {
+  background: linear-gradient(180deg, transparent 60%, rgba(244, 208, 63, 0.6) 60%, rgba(244, 208, 63, 0.6) 92%, transparent 92%);
+}
+.offer-wrap .voce-lead { color: #4b5563; }
+
+.offer-box {
+  background: var(--notte);
+  color: var(--testo-chiaro);
+  border-radius: var(--r-lg);
+  padding: var(--space-12) var(--space-8);
+  margin-top: var(--space-12);
+  position: relative;
+  overflow: hidden;
+}
+.offer-box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 60%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(244, 208, 63, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.offer-header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+  position: relative;
+}
+.offer-tag {
+  display: inline-block;
+  background: var(--marker);
+  color: var(--notte);
+  padding: 4px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  border-radius: var(--r-sm);
+  margin-bottom: var(--space-4);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.offer-name {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.offer-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid rgba(244, 208, 63, 0.15);
+  border-bottom: 1px solid rgba(244, 208, 63, 0.15);
+  padding: var(--space-8) 0;
+  position: relative;
+}
+.offer-stat {
+  text-align: center;
+  position: relative;
+}
+.offer-stat:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0; top: 20%; bottom: 20%;
+  width: 1px;
+  background: rgba(244, 208, 63, 0.15);
+}
+.offer-stat-value {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: var(--marker);
+  display: block;
+  line-height: 1;
+}
+.offer-stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--testo-tenue);
+  margin-top: var(--space-3);
+}
+
+.offer-deal {
+  margin-top: var(--space-12);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+}
+.deal-block {
+  padding: var(--space-6);
+  border: 1px solid rgba(244, 208, 63, 0.15);
+  border-radius: var(--r-md);
+  position: relative;
+}
+.deal-block-tag {
+  position: absolute;
+  top: -10px;
+  left: 16px;
+  background: var(--notte);
+  padding: 0 var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.deal-block.si .deal-block-tag { color: var(--verde); border-color: var(--verde); }
+.deal-block.no .deal-block-tag { color: var(--rosso); border-color: var(--rosso); }
+.deal-block.si { border-color: rgba(13, 127, 90, 0.3); }
+.deal-block.no { border-color: rgba(231, 76, 60, 0.3); }
+.deal-block-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+.deal-block-body { color: var(--testo-tenue); font-size: 0.95rem; line-height: 1.55; }
+
+/* ============================================
+   VOCE 04: FORM
+   ============================================ */
+.form-wrap {
+  max-width: 720px;
+  margin: var(--space-12) auto 0;
+  background: rgba(36, 52, 86, 0.4);
+  border: 1px solid rgba(244, 208, 63, 0.2);
+  border-radius: var(--r-lg);
+  padding: var(--space-12) var(--space-8);
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+.form-field { display: flex; flex-direction: column; }
+.form-field.full { grid-column: 1 / -1; }
+.form-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--marker);
+  margin-bottom: var(--space-2);
+}
+.form-input, .form-select, .form-textarea {
+  background: rgba(10, 14, 26, 0.6);
+  border: 1px solid rgba(229, 231, 235, 0.15);
+  border-radius: var(--r-md);
+  padding: var(--space-4);
+  font-size: 1rem;
+  color: var(--testo-chiaro);
+  transition: border-color 0.15s ease, background 0.15s ease;
+  font-family: var(--font-body);
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--marker);
+  background: rgba(10, 14, 26, 0.85);
+}
+.form-textarea { resize: vertical; min-height: 80px; }
+
+.form-upload {
+  border: 2px dashed rgba(244, 208, 63, 0.3);
+  border-radius: var(--r-md);
+  padding: var(--space-8);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  position: relative;
+}
+.form-upload:hover { border-color: var(--marker); background: rgba(244, 208, 63, 0.04); }
+.form-upload input[type="file"] { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.form-upload-icon {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--marker);
+  margin-bottom: var(--space-2);
+}
+.form-upload-title { font-weight: 600; margin-bottom: var(--space-1); }
+.form-upload-hint { font-size: 0.85rem; color: var(--testo-tenue); }
+.form-upload.has-file { border-color: var(--verde); background: rgba(13, 127, 90, 0.06); }
+.form-upload.has-file .form-upload-icon { color: var(--verde); }
+
+.form-consents {
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(229, 231, 235, 0.1);
+  font-size: 0.88rem;
+}
+.consent {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  margin-bottom: var(--space-3);
+  color: var(--testo-tenue);
+  line-height: 1.5;
+}
+.consent input[type="checkbox"] {
+  margin-top: 4px;
+  accent-color: var(--marker);
+  width: 16px; height: 16px;
+  flex-shrink: 0;
+}
+.consent a { color: var(--marker); text-decoration: underline; text-underline-offset: 2px; }
+
+.form-submit {
+  width: 100%;
+  margin-top: var(--space-6);
+  background: var(--marker);
+  color: var(--notte);
+  padding: var(--space-6);
+  border-radius: var(--r-md);
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.form-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(244, 208, 63, 0.3);
+}
+.form-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.form-status {
+  margin-top: var(--space-4);
+  padding: var(--space-4);
+  border-radius: var(--r-md);
+  font-size: 0.95rem;
+  display: none;
+}
+.form-status.show { display: block; }
+.form-status.success { background: rgba(13, 127, 90, 0.15); color: #4ade80; border: 1px solid rgba(13, 127, 90, 0.3); }
+.form-status.error { background: rgba(231, 76, 60, 0.15); color: #fca5a5; border: 1px solid rgba(231, 76, 60, 0.3); }
+
+/* ============================================
+   VOCE 05: AUTHORITY
+   ============================================ */
+.authority {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+  margin-top: var(--space-12);
+}
+.authority-card {
+  background: rgba(36, 52, 86, 0.5);
+  border: 1px solid rgba(244, 208, 63, 0.1);
+  border-radius: var(--r-lg);
+  padding: var(--space-8);
+}
+.authority-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+  letter-spacing: -0.02em;
+}
+.authority-role {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--marker);
+  margin-bottom: var(--space-4);
+}
+.authority-body { color: var(--testo-tenue); line-height: 1.6; font-size: 0.95rem; }
+
+/* ============================================
+   VOCE 06: FAQ
+   ============================================ */
+.faq {
+  max-width: 820px;
+  margin: var(--space-12) auto 0;
+}
+.faq-item {
+  border-top: 1px solid rgba(244, 208, 63, 0.12);
+  padding: var(--space-6) 0;
+}
+.faq-item:last-child { border-bottom: 1px solid rgba(244, 208, 63, 0.12); }
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  padding: 0;
+  gap: var(--space-6);
+}
+.faq-q-icon {
+  flex-shrink: 0;
+  width: 24px; height: 24px;
+  border: 1px solid var(--marker);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--marker);
+  font-family: var(--font-mono);
+  transition: transform 0.2s ease;
+}
+.faq-item.open .faq-q-icon { transform: rotate(45deg); }
+.faq-a {
+  margin-top: var(--space-4);
+  color: var(--testo-tenue);
+  line-height: 1.7;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, margin-top 0.3s ease;
+}
+.faq-item.open .faq-a {
+  max-height: 500px;
+}
+
+/* ============================================
+   FINAL CTA
+   ============================================ */
+.final-cta {
+  text-align: center;
+  padding: var(--space-24) 0;
+  background: linear-gradient(180deg, var(--acciaio) 0%, var(--notte) 100%);
+}
+.final-cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: var(--space-4);
+  line-height: 1.05;
+}
+.final-cta h2 em {
+  font-style: normal;
+  position: relative;
+  display: inline-block;
+}
+.final-cta h2 em::after {
+  content: "";
+  position: absolute;
+  left: -4px; right: -4px; bottom: 4%;
+  height: 28%;
+  background: var(--marker);
+  z-index: -1;
+  transform: rotate(-0.5deg);
+}
+.final-cta p {
+  color: var(--testo-tenue);
+  font-size: 1.15rem;
+  margin-bottom: var(--space-8);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+  background: var(--notte);
+  border-top: 1px solid rgba(244, 208, 63, 0.08);
+  padding: var(--space-16) 0 var(--space-8);
+  font-size: 0.88rem;
+  color: var(--testo-tenue);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--space-8);
+  margin-bottom: var(--space-12);
+}
+.footer-col h4 {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--marker);
+  margin-bottom: var(--space-4);
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: var(--space-2); }
+.footer-col a:hover { color: var(--testo-chiaro); }
+.footer-bottom {
+  border-top: 1px solid rgba(244, 208, 63, 0.08);
+  padding-top: var(--space-6);
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+/* ============================================
+   REVEAL ON SCROLL
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 960px) {
+  .hero-grid { grid-template-columns: 1fr; gap: var(--space-8); }
+  .bolletta-mock { transform: none; max-width: 480px; width: 100%; margin: 0 auto; }
+  .annotazione-1, .annotazione-2 { display: none; }
+  .cards-grid { grid-template-columns: 1fr 1fr; }
+  .offer-stats { grid-template-columns: 1fr; gap: var(--space-6); padding: var(--space-6) 0; }
+  .offer-stat:not(:last-child)::after { display: none; }
+  .offer-deal { grid-template-columns: 1fr; }
+  .authority { grid-template-columns: 1fr; gap: var(--space-6); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .voce { padding: var(--space-16) 0; }
+  .container { padding: 0 var(--space-4); }
+  .hero { padding-top: var(--space-8); padding-bottom: var(--space-12); }
+  .hero h1 { font-size: clamp(2rem, 9vw, 3rem); }
+  .hero-sub { font-size: 1.05rem; }
+  .voce-title { font-size: clamp(1.7rem, 7vw, 2.4rem); }
+  .form-row { grid-template-columns: 1fr; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .hero-data { flex-direction: column; gap: var(--space-4); }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: var(--space-3); }
+  .form-wrap { padding: var(--space-6); }
+  .offer-box { padding: var(--space-8) var(--space-4); }
+  .bolletta-mock { font-size: 0.75rem; padding: var(--space-6) var(--space-4); }
+  .nav-cta { padding: var(--space-2) var(--space-4); font-size: 0.85rem; }
+  .logo { font-size: 0.95rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- =================================================
+     HEADER
+     ================================================= -->
+<header class="site-header">
+  <div class="container nav">
+    <a class="logo" href="/">
+      <span class="logo-mark">?</span>
+      <span>interrogalabolletta<span style="color:var(--marker)">.it</span></span>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- =================================================
+     HERO — VOCE 01.A
+     ================================================= -->
+<section class="hero container">
+  <div class="hero-grid">
+    <div class="reveal">
+      <div class="voce-eyebrow">VOCE 01.A — Il problema</div>
+      <h1>La tua bolletta sembra<br/>corretta. Finché qualcuno<br/>non la <em>interroga</em>.</h1>
+      <p class="hero-sub">
+        Prima di cambiare fornitore, prima di firmare qualsiasi proposta, fai una cosa semplice: verifica la tua bolletta.
+        <br/><br/>
+        Carica una bolletta <strong style="color:white">luce o gas</strong>. In 48 ore te la analizziamo. Gratis.
+      </p>
+
+      <div class="hero-data">
+        <div class="hero-data-item">
+          <span class="hero-data-value">€0</span>
+          <span class="hero-data-label">Costo del check</span>
+        </div>
+        <div class="hero-data-item">
+          <span class="hero-data-value">48 ore</span>
+          <span class="hero-data-label">Tempo di risposta</span>
+        </div>
+        <div class="hero-data-item">
+          <span class="hero-data-value">20+ anni</span>
+          <span class="hero-data-label">Esperienza tecnica</span>
+        </div>
+      </div>
+
+      <!-- QUICK UPLOAD: il pezzo di conversione principale -->
+      <form class="quick-upload" id="quick-form">
+        <div class="quick-upload-title">Carica una bolletta (luce o gas)</div>
+        <label class="quick-dropzone" id="quick-dropzone">
+          <input type="file" id="quick-file" accept="application/pdf,image/jpeg,image/png" required />
+          <div class="quick-dropzone-text" id="quick-dropzone-text">Trascina qui il file oppure clicca per selezionarlo</div>
+          <div class="quick-dropzone-hint" id="quick-dropzone-hint">PDF, JPG o PNG · max 10 MB</div>
+        </label>
+        <input class="quick-email" type="email" id="quick-email" placeholder="La tua email aziendale" required />
+        <button class="quick-submit" type="submit">
+          Avvia il check gratuito →
+        </button>
+        <small class="quick-footnote">
+          Nessun impegno. Nessun cambio fornitore obbligatorio.
+        </small>
+      </form>
+    </div>
+
+    <!-- Signature element: bolletta annotata (basata su fattura Enel anonimizzata) -->
+    <div class="reveal">
+      <div class="bolletta-mock" aria-hidden="true">
+        <div class="bolletta-row">
+          <span class="bolletta-label">POD</span>
+          <span class="bolletta-value">IT001E00000000</span>
+        </div>
+        <div class="bolletta-row">
+          <span class="bolletta-label">Periodo fatturato</span>
+          <span class="bolletta-value">01.01 — 31.01.2025</span>
+        </div>
+        <div class="bolletta-row">
+          <span class="bolletta-label">Energia attiva (kWh)</span>
+          <span class="bolletta-value">3.900</span>
+        </div>
+        <div class="bolletta-row evidenziata">
+          <span class="bolletta-label">Quota potenza (410 kW)</span>
+          <span class="bolletta-value">€ 1.040,90</span>
+        </div>
+        <div class="bolletta-row">
+          <span class="bolletta-label">Spesa per l'energia</span>
+          <span class="bolletta-value">€ 731,17</span>
+        </div>
+        <div class="bolletta-row">
+          <span class="bolletta-label">Oneri di sistema</span>
+          <span class="bolletta-value">€ 769,94</span>
+        </div>
+        <div class="bolletta-row evidenziata">
+          <span class="bolletta-label">Agevolazioni applicate</span>
+          <span class="bolletta-value">€ — ?</span>
+        </div>
+        <div class="bolletta-row">
+          <span class="bolletta-label">Accisa + IVA 22%</span>
+          <span class="bolletta-value">€ 647,80</span>
+        </div>
+        <div class="bolletta-row totale">
+          <span class="bolletta-label">TOTALE</span>
+          <span class="bolletta-value">€ 3.322,02</span>
+        </div>
+
+        <div class="annotazione annotazione-1">coerente con<br/>l'uso reale?</div>
+        <div class="annotazione annotazione-2">applicate<br/>correttamente?</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================================================
+     SEZIONE STORYTELLING — Perché te lo chiediamo
+     ================================================= -->
+<section class="voce story-section">
+  <div class="container">
+    <div class="reveal" style="max-width: 740px;">
+      <div class="voce-eyebrow">VOCE 01.B — Perché te lo chiediamo</div>
+      <h2 class="voce-title">Non ti chiediamo<br/>di <em>fidarti</em>.<br/>Di verificare.</h2>
+    </div>
+
+    <div class="story-block reveal">
+      <p>
+        Lo sappiamo bene: quando un'azienda riceve una proposta sull'energia, la prima reazione è quasi sempre la stessa.
+      </p>
+
+      <div class="story-quotes">
+        <blockquote>Sì, ma poi dove sta il trucco?</blockquote>
+        <blockquote>Mi faranno perdere tempo?</blockquote>
+        <blockquote>Vogliono solo farmi cambiare contratto?</blockquote>
+      </div>
+
+      <p class="tenue">
+        È una diffidenza comprensibile. Per anni molte PMI hanno ricevuto offerte, promesse di risparmio e analisi costruite più per vendere che per tutelare davvero l'azienda.
+      </p>
+
+      <p>
+        Per questo non ti chiediamo di fidarti sulla parola. <strong style="color:white">Ti chiediamo di verificare.</strong> Carica una bolletta luce o gas e lascia che siano i numeri a parlare.
+      </p>
+
+      <p class="tenue">
+        Ogni fattura energetica è il risultato di dati, letture, contratti, comunicazioni del distributore locale, componenti fiscali, oneri e agevolazioni. Basta che uno solo di questi elementi non sia aggiornato, non venga comunicato correttamente o non sia applicato nel modo previsto per generare costi che continuano a passare inosservati. E questo accade più spesso di quanto molte imprese immaginino.
+      </p>
+
+      <ul class="story-list">
+        <li>Ricalcoli dovuti a letture o dati non allineati.</li>
+        <li>Consumi stimati che diventano conguagli improvvisi.</li>
+        <li>Potenze fatturate non coerenti con il reale utilizzo.</li>
+        <li>Agevolazioni fiscali non applicate o applicate solo in parte.</li>
+        <li>Opportunità mai valutate perché nessuno ha verificato i requisiti dell'azienda.</li>
+        <li>Riduzioni temporanee degli oneri previste da decreti recenti, che non sono un vero "risparmio" strutturale ma un alleggerimento momentaneo della bolletta — proprio come accade con le accise sui carburanti.</li>
+      </ul>
+
+      <div class="story-metaphor reveal">
+        <div class="story-metaphor-title">È come guidare su una strada piena di autovelox con il contachilometri rotto.</div>
+        <p style="margin: 0; color: var(--testo-tenue); line-height: 1.65;">
+          Stai andando avanti. Stai pagando. Ma non sai se sei dentro il limite, se hai già superato una soglia o se stai accumulando costi che avresti potuto evitare. E aspettare la prossima bolletta non risolve il problema. Potrebbe semplicemente confermare un errore che continua a ripetersi.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================================================
+     VOCE 02.B — COSA CONTROLLIAMO
+     ================================================= -->
+<section class="voce voce-bg-acciaio" id="come-funziona">
+  <div class="container">
+    <div class="reveal" style="max-width: 720px;">
+      <div class="voce-eyebrow">VOCE 02.B — Cosa controlliamo</div>
+      <h2 class="voce-title">Quattro dati che dovrebbero esserci.<br/><em>E quasi mai sono quelli giusti.</em></h2>
+      <p class="voce-lead">
+        Non vendiamo energia. Non cambiamo fornitore. Verifichiamo soltanto se quello che paghi è quello che dovresti pagare.
+      </p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card reveal">
+        <div class="card-num">01 / Consumi</div>
+        <h3 class="card-title">Fatturati vs misurati</h3>
+        <p class="card-body">Confrontiamo i kWh che ti fattura il venditore con quelli che ha misurato il distributore. Se non coincidono, hai un dato per contestare.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-num">02 / Potenza</div>
+        <h3 class="card-title">Quota fatturata vs reale</h3>
+        <p class="card-body">Verifichiamo se la potenza impegnata che paghi è coerente con i prelievi della tua azienda. Spesso è dimensionata male da anni.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-num">03 / Contratto</div>
+        <h3 class="card-title">Condizioni applicate</h3>
+        <p class="card-body">Spread, costi fissi, corrispettivi, oneri. Controlliamo se il contratto che hai firmato è quello che ti stanno effettivamente applicando.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-num">04 / Decreto</div>
+        <h3 class="card-title">Bollette 2026 e agevolazioni</h3>
+        <p class="card-body">Verifichiamo se lo sconto del DL 21/2026 e le altre agevolazioni a cui la tua azienda ha diritto sono effettivamente applicate e per quanto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================================================
+     VOCE 02.C — BOLLETTA PERFETTA (MTU15 / 96 prezzi/giorno)
+     ================================================= -->
+<section class="voce" id="bolletta-perfetta" style="border-top: 1px solid rgba(255,255,255,0.06);">
+  <div class="container">
+    <div class="reveal" style="max-width: 780px;">
+      <div class="voce-eyebrow">VOCE 02.C — Bolletta Perfetta</div>
+      <h2 class="voce-title">Il mercato non ha un prezzo.<br/><em>Ne ha novantasei.</em></h2>
+      <p class="voce-lead">
+        Dal 1° gennaio 2025 il mercato elettrico italiano ha cambiato faccia. Ogni giorno la borsa elettrica genera <strong style="color: var(--carta);">96 prezzi diversi</strong>, uno ogni quindici minuti (MTU15 ex Reg. UE 2019/943 e delibera ARERA 353/2024/R/eel). La tua bolletta non nasce più da un valore unico: nasce dalla somma di novantasei piccoli prezzi moltiplicati per i tuoi consumi reali in quel preciso quarto d'ora.
+      </p>
+    </div>
+
+    <div class="reveal" style="max-width: 780px; margin-top: var(--space-8); background: rgba(27, 40, 69, 0.5); border-left: 3px solid var(--marker); padding: var(--space-6); border-radius: 0 8px 8px 0;">
+      <p style="font-family: var(--font-display); font-size: 1.15rem; color: var(--carta); margin-bottom: var(--space-3); font-weight: 600;">Due aziende. Stesso contratto. Stesso consumo. Due bollette completamente diverse.</p>
+      <p style="color: var(--testo-chiaro); font-size: 0.95rem; line-height: 1.7;">
+        Non conta più soltanto <em>quanta</em> energia consumi. Conta <em>in quale quarto d'ora</em> la consumi. Se la tua azienda lavora molto nel tardo pomeriggio o nelle prime ore del mattino, potresti concentrare gran parte dei consumi nei quarti d'ora più costosi della giornata — senza saperlo, e senza che il fornitore te lo dica.
+      </p>
+    </div>
+
+    <div class="reveal" style="max-width: 780px; margin-top: var(--space-8);">
+      <p class="voce-lead" style="margin-bottom: var(--space-4);">
+        Analizziamo quello che nessuno guarda. Non lo spread, non il PUN, non il totale in bolletta: ricostruiamo <strong style="color: var(--carta);">quando</strong> consumi realmente e verifichiamo se il sistema con cui ti fatturano è davvero il più conveniente per il tuo profilo di consumo.
+      </p>
+      <p style="color: var(--testo-tenue); font-size: 0.9rem; font-style: italic; margin-top: var(--space-4);">
+        La differenza tra una bolletta normale e una bolletta ottimizzata potrebbe non essere nel contratto. Potrebbe essere nascosta in quei quindici minuti che, fino ad oggi, nessuno ha mai analizzato.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- =================================================
+     VOCE 03.C — OFFER
+     ================================================= -->
+<section class="voce offer-wrap">
+  <div class="container">
+    <div class="reveal" style="max-width: 720px;">
+      <div class="voce-eyebrow">VOCE 03.C — L'offerta</div>
+      <h2 class="voce-title">Carichi una bolletta.<br/>Te la <em>interroghiamo</em>.<br/>Poi decidi tu.</h2>
+      <p class="voce-lead">
+        Nessun abbonamento, nessuna sottoscrizione obbligata, nessuna telefonata commerciale. Solo un risultato in 48 ore.
+      </p>
+    </div>
+
+    <div class="offer-box reveal">
+      <div class="offer-header">
+        <span class="offer-tag">Servizio gratuito</span>
+        <h3 class="offer-name">First Check Bolletta</h3>
+      </div>
+
+      <div class="offer-stats">
+        <div class="offer-stat">
+          <span class="offer-stat-value">€0</span>
+          <span class="offer-stat-label">Costo del check</span>
+        </div>
+        <div class="offer-stat">
+          <span class="offer-stat-value">48h</span>
+          <span class="offer-stat-label">Risposta tecnica</span>
+        </div>
+        <div class="offer-stat">
+          <span class="offer-stat-value">0</span>
+          <span class="offer-stat-label">Rischi per te</span>
+        </div>
+      </div>
+
+      <div class="offer-deal">
+        <div class="deal-block si">
+          <span class="deal-block-tag">Se troviamo</span>
+          <h4 class="deal-block-title">Anomalie che superano il valore del report</h4>
+          <p class="deal-block-body">Ti proponiamo il <strong style="color:var(--testo-chiaro)">Report di verifica completo</strong>: documento tecnico-fiscale che usi per contestare al fornitore o per il tuo commercialista. Decidi tu se procedere.</p>
+        </div>
+        <div class="deal-block no">
+          <span class="deal-block-tag">Se non troviamo</span>
+          <h4 class="deal-block-title">Anomalie che valgono meno del report</h4>
+          <p class="deal-block-body">Non ti vendiamo nulla. Ti diciamo che paghi correttamente e ti mandiamo un'analisi sintetica. <strong style="color:var(--testo-chiaro)">Nessun costo, nessuna obbligazione.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================================================
+     VOCE 04.D — FORM (CARICA BOLLETTA)
+     ================================================= -->
+<section class="voce" id="carica">
+  <div class="container">
+    <div class="reveal" style="max-width: 720px; margin: 0 auto; text-align: center;">
+      <div class="voce-eyebrow" style="justify-content: center;">VOCE 04.D — Completa il check</div>
+      <h2 class="voce-title">Pochi dati,<br/>e i tuoi numeri <em>parleranno</em>.</h2>
+      <p class="voce-lead" style="margin: 0 auto;">
+        Completa i dati aziendali essenziali. Riceverai entro 48 ore lavorative un primo feedback chiaro: se la tua posizione risulta coerente avrai una conferma professionale; se emergono anomalie saprai esattamente dove guardare.
+      </p>
+    </div>
+
+    <form class="form-wrap reveal" id="check-form" novalidate>
+      <div class="form-row">
+        <div class="form-field">
+          <label class="form-label" for="ragione">Ragione sociale</label>
+          <input class="form-input" type="text" id="ragione" name="ragione_sociale" required />
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="piva">Partita IVA</label>
+          <input class="form-input" type="text" id="piva" name="partita_iva" pattern="[0-9]{11}" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label class="form-label" for="referente">Nome referente</label>
+          <input class="form-input" type="text" id="referente" name="referente" required />
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="ruolo">Ruolo aziendale</label>
+          <input class="form-input" type="text" id="ruolo" name="ruolo" placeholder="es. Titolare, Direttore Amm." />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label class="form-label" for="email">Email aziendale</label>
+          <input class="form-input" type="email" id="email" name="email" required />
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="telefono">Telefono</label>
+          <input class="form-input" type="tel" id="telefono" name="telefono" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label class="form-label" for="settore">Settore</label>
+          <select class="form-select" id="settore" name="settore" required>
+            <option value="">Seleziona…</option>
+            <option>Manifatturiero</option>
+            <option>Commercio / Retail</option>
+            <option>Servizi</option>
+            <option>Edilizia</option>
+            <option>Agricoltura</option>
+            <option>Ho.Re.Ca.</option>
+            <option>Altro</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="consumo">Consumo annuo stimato</label>
+          <select class="form-select" id="consumo" name="consumo">
+            <option value="">Non lo so</option>
+            <option>Sotto 20 MWh</option>
+            <option>20 - 100 MWh</option>
+            <option>100 - 500 MWh</option>
+            <option>500 - 2.000 MWh</option>
+            <option>Oltre 2.000 MWh</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-field full" style="margin-bottom: var(--space-4);">
+        <label class="form-label" for="upload">Carica una bolletta recente</label>
+        <label class="form-upload" id="upload-area">
+          <div class="form-upload-icon">↑</div>
+          <div class="form-upload-title">Trascina qui il file oppure clicca per selezionarlo</div>
+          <div class="form-upload-hint">PDF, JPG o PNG · max 10 MB</div>
+          <input type="file" id="upload" name="bolletta" accept="application/pdf,image/jpeg,image/png" />
+        </label>
+      </div>
+
+      <div class="form-field full">
+        <label class="form-label" for="note">Note (facoltative)</label>
+        <textarea class="form-textarea" id="note" name="note" placeholder="Eventuali specifiche o anomalie che hai già notato"></textarea>
+      </div>
+
+      <div class="form-consents">
+        <label class="consent">
+          <input type="checkbox" required name="consent_servizio" />
+          <span>Autorizzo il trattamento dei miei dati per l'erogazione del servizio First Check Bolletta ai sensi del Reg. UE 2016/679 (GDPR). <a href="/privacy.html" target="_blank">Informativa</a>. <strong>*</strong></span>
+        </label>
+        <label class="consent">
+          <input type="checkbox" name="consent_marketing" />
+          <span>Autorizzo, facoltativamente, il trattamento dei miei dati per finalità di marketing e comunicazioni commerciali da parte di Gruppo Energia ® e Torresi &amp; Associati S.r.l.</span>
+        </label>
+      </div>
+
+      <button class="form-submit" type="submit" id="submit-btn">
+        Avvia il First Check gratuito →
+      </button>
+
+      <div class="form-status" id="form-status"></div>
+    </form>
+  </div>
+</section>
+
+<!-- =================================================
+     VOCE 05.E — AUTHORITY
+     ================================================= -->
+<section class="voce voce-bg-acciaio">
+  <div class="container">
+    <div class="reveal" style="max-width: 720px;">
+      <div class="voce-eyebrow">VOCE 05.E — Chi firma il check</div>
+      <h2 class="voce-title">Non un call center.<br/>Non un commerciale.<br/>Tecnici <em>certificati</em>.</h2>
+      <p class="voce-lead">
+        Il report non viene elaborato da un call center o da un commerciale con un listino in mano. Viene analizzato da EGE e Utility Manager certificati di Gruppo Energia ®, che lavorano ogni giorno su mercato energetico, fiscalità, agevolazioni, contratti e anomalie di fatturazione. La componente fiscale e la validazione del dato sono presidiate dallo Studio Torresi &amp; Associati.
+      </p>
+    </div>
+
+    <div class="authority">
+      <div class="authority-card reveal">
+        <div class="authority-role">Analisi tecnica</div>
+        <h3>Gruppo Energia ®</h3>
+        <p class="authority-body">
+          Da oltre 20 anni a fianco delle imprese italiane sui costi energetici. Specializzati in fiscalità energetica per PMI, condomini e operatori produttivi. EGE (Esperti in Gestione dell'Energia) e Utility Manager certificati. Verifica di consumi, potenza, contratti, oneri di sistema e applicazione delle agevolazioni in bolletta.
+        </p>
+      </div>
+      <div class="authority-card reveal">
+        <div class="authority-role">Validazione fiscale</div>
+        <h3>Andrea Torresi</h3>
+        <p class="authority-body">
+          Commercialista e Revisore Contabile, iscritto all'ODCEC di Macerata e Camerino al n° 274/A. Amministratore Unico di Torresi &amp; Associati S.r.l. Garantisce la validità documentale del report ai fini fiscali e la sua utilizzabilità presso il commercialista del cliente o in sede di contestazione al fornitore.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================================================
+     VOCE 06.F — FAQ
+     ================================================= -->
+<section class="voce" id="faq">
+  <div class="container">
+    <div class="reveal" style="max-width: 720px; margin: 0 auto; text-align: center;">
+      <div class="voce-eyebrow" style="justify-content: center;">VOCE 06.F — Domande frequenti</div>
+      <h2 class="voce-title">Le obiezioni<br/>che <em>sicuramente</em> hai.</h2>
+    </div>
+
+    <div class="faq reveal">
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>Cosa rischio se carico la bolletta?</span>
+          <span class="faq-q-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Nulla. Nel caso migliore ottieni una certezza: la tua azienda è sotto controllo. Nel caso più utile scopri un problema, un costo o un'opportunità prima che continui a pesare sui tuoi conti. Non ti chiediamo di cambiare fornitore, non ti chiediamo di firmare nulla, non ti chiediamo di prendere decisioni oggi. Ti chiediamo solo di caricare una fattura luce o gas.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>Chi analizza concretamente la bolletta?</span>
+          <span class="faq-q-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>EGE (Esperti in Gestione dell'Energia) e Utility Manager certificati di Gruppo Energia ®, che lavorano quotidianamente su mercato energetico, fiscalità, agevolazioni, contratti e anomalie di fatturazione. Non un call center, non un commerciale con un listino in mano. La componente fiscale viene validata da Torresi &amp; Associati S.r.l.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>Lo sconto del Decreto Bollette 2026 non è applicato automaticamente?</span>
+          <span class="faq-q-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Sì, formalmente il contributo previsto dal Decreto Bollette 2026 viene applicato in fattura dal fornitore. Il punto è che la sua corretta applicazione dipende dall'esattezza dei dati di consumo, della potenza fatturata e della classificazione del cliente. Anomalie a monte si traducono in benefici parziali o errati. Il First Check verifica esattamente questi disallineamenti. Va anche detto che si tratta di una riduzione temporanea degli oneri — non un risparmio strutturale, ma un alleggerimento momentaneo della bolletta, come accade con le accise sui carburanti.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>Quanto costa il report completo se decido di procedere?</span>
+          <span class="faq-q-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Il Report di verifica ha un costo trimestrale calibrato sulla complessità della fornitura analizzata e ti viene comunicato in modo trasparente prima di qualsiasi decisione. Te lo proponiamo solo se dal First Check emergono anomalie il cui valore monetario lo giustifica chiaramente. Se così non è, non ti viene proposto alcun servizio a pagamento.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>I miei dati come vengono trattati?</span>
+          <span class="faq-q-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Trattamento conforme al Reg. UE 2016/679 (GDPR). I dati di contatto e la bolletta caricata vengono utilizzati esclusivamente per l'erogazione del First Check. La conservazione è limitata al tempo necessario all'esecuzione del servizio e agli obblighi documentali di legge. Nessuna cessione a terzi senza consenso esplicito.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>Mi cambiate il fornitore o mi vendete energia?</span>
+          <span class="faq-q-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Trasparenza totale: Gruppo Energia ® è anche un operatore di vendita e intermediazione di forniture. Ma l'analisi che riceverai è tecnicamente indipendente dal fornitore che hai oggi e viene erogata a prescindere dal fatto che tu decida o meno di valutare offerte alternative. Se dal check emerge che possiamo proporti condizioni più vantaggiose per il tuo profilo di consumo, te lo diciamo apertamente in un capitolo separato del report. Sei tu a scegliere se valutare la proposta: la validità dell'analisi non cambia in nessun caso.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>Posso usarlo anche per gli anni precedenti?</span>
+          <span class="faq-q-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Sì. Il Decreto Bollette 2025 aveva una platea diversa ma un'agevolazione maggiore. Eventuali anomalie 2025 possono essere oggetto di richiesta di rimborso al fornitore. Il First Check copre anche le forniture 2025 se carichi bollette del periodo.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>Sono un commercialista. Posso proporlo ai miei clienti?</span>
+          <span class="faq-q-icon">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Sì, esiste un canale dedicato agli studi professionali con condizioni specifiche. Contattaci dal form indicando il ruolo: ti ricontatteremo con la convenzione studi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================================================
+     FINAL CTA
+     ================================================= -->
+<section class="final-cta">
+  <div class="container">
+    <div class="reveal">
+      <h2>Non per fidarti di noi.<br/>Per iniziare a fidarti<br/>dei <em>tuoi numeri</em>.</h2>
+      <p>Carica una bolletta. 48 ore. Nessun impegno. Nessun cambio fornitore obbligatorio.</p>
+      <a class="btn-primary" href="#quick-form">
+        Carica la bolletta ora
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- =================================================
+     FOOTER
+     ================================================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Interrogalabolletta.it</h4>
+        <p style="margin-bottom: var(--space-3);">Verifica tecnico-fiscale indipendente delle bollette energetiche per imprese italiane.</p>
+        <p style="font-size:0.8rem; margin-bottom: var(--space-3);">Servizio erogato in contitolarità del trattamento ex art. 26 GDPR da Gruppo Energia ® e Torresi &amp; Associati S.r.l.</p>
+        <img src="/assets/Metodo_Lockup_Ponte_Bianco.png" alt="Torresi &amp; Associati S.r.l." style="max-width: 220px; opacity: 0.85; margin-top: var(--space-2);" />
+      </div>
+      <div class="footer-col">
+        <h4>Servizio</h4>
+        <ul>
+          <li><a href="#come-funziona">Cosa controlliamo</a></li>
+          <li><a href="#carica">First Check gratuito</a></li>
+          <li><a href="#carica">Report completo</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legale</h4>
+        <ul>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/cookie.html">Cookie Policy</a></li>
+          <li><a href="/termini.html">Termini di servizio</a></li>
+          <li><a href="javascript:void(0)" onclick="if(window.ilbReopenConsent){window.ilbReopenConsent()}">Preferenze cookie</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contatti</h4>
+        <ul>
+          <li>info@interrogalabolletta.it</li>
+          <li>Tel: 0721.429238</li>
+        </ul>
+        <p style="font-size:0.75rem; margin-top: var(--space-4); color: var(--testo-tenue); line-height: 1.55;">
+          <strong style="color: var(--testo-chiaro);">Torresi &amp; Associati S.r.l.</strong><br/>
+          P.IVA 02050980438 · REA MC-271193<br/>
+          Corso Umberto I 161, 62012 Civitanova Marche (MC)<br/>
+          PEC: torresieassociatisrl@pec.it
+        </p>
+        <p style="font-size:0.75rem; margin-top: var(--space-3); color: var(--testo-tenue); line-height: 1.55;">
+          <strong style="color: var(--testo-chiaro);">Gruppo Energia ® — Operations S.r.l.</strong><br/>
+          P.IVA 02725490417
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Gruppo Energia ® e Torresi &amp; Associati S.r.l. — Tutti i diritti riservati</span>
+      <span>Contenuti editoriali assistiti da sistemi AI ex art. 50 Reg. UE 2024/1689</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Cookie banner (auto-init on load) -->
+<script src="/cookie-banner.js" defer></script>
+
+<!-- =================================================
+     SCRIPTS
+     ================================================= -->
+<script>
+// ---------- Reveal on scroll ----------
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ---------- FAQ accordion ----------
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    q.parentElement.classList.toggle('open');
+  });
+});
+
+// ---------- Quick upload nella hero (lead capture immediato) ----------
+const quickForm = document.getElementById('quick-form');
+const quickFile = document.getElementById('quick-file');
+const quickEmail = document.getElementById('quick-email');
+const quickDropzone = document.getElementById('quick-dropzone');
+const quickDropzoneText = document.getElementById('quick-dropzone-text');
+const quickDropzoneHint = document.getElementById('quick-dropzone-hint');
+
+function setQuickFile(file) {
+  if (!file) return;
+  if (file.size > 10 * 1024 * 1024) {
+    alert('File troppo grande. Massimo 10 MB.');
+    quickFile.value = '';
+    return;
+  }
+  // assegna file all'input via DataTransfer
+  const dt = new DataTransfer();
+  dt.items.add(file);
+  quickFile.files = dt.files;
+  quickDropzone.classList.add('has-file');
+  quickDropzoneText.textContent = file.name;
+  quickDropzoneHint.textContent = (file.size / 1024 / 1024).toFixed(2) + ' MB · clicca per cambiare';
+}
+
+quickFile.addEventListener('change', e => setQuickFile(e.target.files[0]));
+
+// Drag & drop sulla dropzone della hero
+['dragenter', 'dragover'].forEach(evt => {
+  quickDropzone.addEventListener(evt, e => {
+    e.preventDefault(); e.stopPropagation();
+    quickDropzone.classList.add('drag');
+  });
+});
+['dragleave', 'drop'].forEach(evt => {
+  quickDropzone.addEventListener(evt, e => {
+    e.preventDefault(); e.stopPropagation();
+    quickDropzone.classList.remove('drag');
+  });
+});
+quickDropzone.addEventListener('drop', e => {
+  const file = e.dataTransfer.files[0];
+  if (file) setQuickFile(file);
+});
+
+// Submit del quick-form: trasferisce file + email al form completo, scrolla, focus
+quickForm.addEventListener('submit', e => {
+  e.preventDefault();
+  const file = quickFile.files[0];
+  const email = quickEmail.value.trim();
+  if (!file || !email) {
+    alert('Carica una bolletta e inserisci la tua email per procedere.');
+    return;
+  }
+
+  // trasferisce file all'input del form completo
+  const fullFileInput = document.getElementById('upload');
+  const dt = new DataTransfer();
+  dt.items.add(file);
+  fullFileInput.files = dt.files;
+
+  // visualizza l'avvenuto trasferimento nel form completo
+  const fullUploadArea = document.getElementById('upload-area');
+  fullUploadArea.classList.add('has-file');
+  fullUploadArea.querySelector('.form-upload-title').textContent = file.name;
+  fullUploadArea.querySelector('.form-upload-hint').textContent = (file.size / 1024 / 1024).toFixed(2) + ' MB · clicca per cambiare file';
+
+  // prefill email
+  document.getElementById('email').value = email;
+
+  // scroll smooth al form completo
+  document.getElementById('carica').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  // focus sul primo campo da completare dopo un breve delay (per lasciare finire lo scroll)
+  setTimeout(() => {
+    document.getElementById('ragione').focus();
+  }, 700);
+});
+
+// ---------- File upload UI (form completo) ----------
+const uploadInput = document.getElementById('upload');
+const uploadArea = document.getElementById('upload-area');
+uploadInput.addEventListener('change', e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  if (file.size > 10 * 1024 * 1024) {
+    alert('File troppo grande. Massimo 10 MB.');
+    uploadInput.value = '';
+    return;
+  }
+  uploadArea.classList.add('has-file');
+  uploadArea.querySelector('.form-upload-title').textContent = file.name;
+  uploadArea.querySelector('.form-upload-hint').textContent = (file.size / 1024 / 1024).toFixed(2) + ' MB · clicca per cambiare file';
+});
+
+// ---------- Form submission ----------
+// Endpoint n8n production
+const WEBHOOK_URL = 'https://n8n.profiscal.it/webhook/interrogalabolletta';
+
+const form = document.getElementById('check-form');
+const submitBtn = document.getElementById('submit-btn');
+const statusBox = document.getElementById('form-status');
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  statusBox.classList.remove('show', 'success', 'error');
+
+  // Validation client-side base
+  const piva = document.getElementById('piva').value.trim();
+  if (!/^[0-9]{11}$/.test(piva)) {
+    showStatus('La Partita IVA deve contenere 11 cifre numeriche.', 'error');
+    return;
+  }
+
+  const consentServizio = form.querySelector('[name="consent_servizio"]').checked;
+  if (!consentServizio) {
+    showStatus('Devi autorizzare il trattamento dei dati per il servizio.', 'error');
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Invio in corso…';
+
+  const formData = new FormData(form);
+  formData.append('source', 'interrogalabolletta.it');
+  formData.append('timestamp', new Date().toISOString());
+
+  try {
+    const res = await fetch(WEBHOOK_URL, {
+      method: 'POST',
+      body: formData
+    });
+    if (!res.ok) throw new Error('Server response: ' + res.status);
+
+    showStatus('Richiesta inviata. Riceverai il First Check Bolletta entro 48 ore lavorative all\'indirizzo email indicato.', 'success');
+    form.reset();
+    uploadArea.classList.remove('has-file');
+    uploadArea.querySelector('.form-upload-title').textContent = 'Trascina qui il file oppure clicca per selezionarlo';
+    uploadArea.querySelector('.form-upload-hint').textContent = 'PDF, JPG o PNG · max 10 MB';
+  } catch (err) {
+    console.error(err);
+    showStatus('Si è verificato un problema nell\'invio. Riprova tra qualche istante o scrivi a info@interrogalabolletta.it.', 'error');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Avvia il First Check gratuito →';
+  }
+});
+
+function showStatus(msg, type) {
+  statusBox.textContent = msg;
+  statusBox.className = 'form-status show ' + type;
+  if (type === 'success') {
+    statusBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+}
+</script>
+
+</body>
+</html>
