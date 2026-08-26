@@ -3,30 +3,5 @@
 
 User-agent: *
 Allow: /
-Disallow: /assets/private/
 
-# Sitemap
 Sitemap: https://interrogalabolletta.it/sitemap.xml
-
-# Blocco esplicito degli scraper AI più aggressivi
-# (motivi: contenuti editoriali proprietari, tutela IP dei metodi di analisi)
-User-agent: GPTBot
-Disallow: /
-
-User-agent: ClaudeBot
-Disallow: /
-
-User-agent: anthropic-ai
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: PerplexityBot
-Disallow: /
-
-User-agent: Bytespider
-Disallow: /
