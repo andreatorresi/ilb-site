@@ -1,0 +1,63 @@
+# Interrogalabolletta
+
+> Verifica tecnico-fiscale indipendente delle bollette luce/gas per PMI italiane. Analisi gratuita in 48 ore su consumi, potenza, contratto, applicazione del Decreto Bollette 2026 e fatturazione a quarti d'ora (MTU15). Nessun cambio fornitore obbligatorio.
+
+Interrogalabolletta è il "first check" indipendente delle bollette energetiche aziendali, erogato in co-provider da **Torresi & Associati S.r.l.** (commercialisti, Civitanova Marche) e **Operations S.r.l. — Gruppo Energia** (consulenza energetica, Pesaro).
+
+## Cosa facciamo
+
+Dopo il caricamento di una bolletta (PDF/immagine), produciamo entro 48 ore lavorative un report che include:
+
+- **Consumi fatturati vs misurati** (controllo kWh venditore vs distributore)
+- **Potenza fatturata vs reale** (verifica dimensionamento potenza impegnata)
+- **Condizioni contrattuali applicate** (spread, costi fissi, oneri, corrispettivi)
+- **Decreto Bollette 2026 (DL 21/2026)** e agevolazioni fiscali (energivore, gasivore, ex 10% IVA, accise ridotte)
+- **MTU15 (quarti d'ora)**: analisi del profilo di consumo rispetto ai 96 prezzi/giorno della borsa elettrica (Reg. UE 2019/943 + ARERA 353/2024/R/eel)
+
+Nessun contratto da cambiare. Nessuna offerta commerciale forzata. Il check è un atto professionale di verifica, non di vendita.
+
+## Target
+
+PMI italiane con utenza elettrica o gas aziendale (POD/PDR), tipicamente spesa energetica > €10.000/anno.
+
+## Pagine principali
+
+- [Home](https://interrogalabolletta.it/): landing con form caricamento bolletta
+- [Privacy](https://interrogalabolletta.it/privacy.html)
+- [Cookie policy](https://interrogalabolletta.it/cookie.html)
+- [Termini di servizio](https://interrogalabolletta.it/termini.html)
+
+## Chi lo eroga (E-E-A-T)
+
+### Torresi & Associati S.r.l.
+- Studio commercialisti, Civitanova Marche (MC)
+- P.IVA 02050980438, REA MC-271193
+- Sede: Corso Umberto I° 161, 62012 Civitanova Marche (MC)
+- Legale rappresentante: Andrea Torresi, Commercialista e Revisore Legale, ODCEC Macerata-Camerino n. 274/A
+- Email: andrea.torresi@torresistudio.it
+- Sito: https://torresistudio.it
+
+### Operations S.r.l. — Gruppo Energia
+- Consulenza energetica, Pesaro (PU)
+- P.IVA 02725490417
+- Telefono: +39 0721 429238
+- Sito: https://gruppoenergia.it
+
+## Metodologia tecnica
+
+Il check unisce competenze fiscali (deduzione corretta componenti, agevolazioni, IVA) e competenze energetiche tecniche (lettura dati distributore, confronto POD/PDR, analisi MTU15). Non è un software automatico: ogni fattura è esaminata da un consulente qualificato.
+
+## Compliance
+
+- GDPR (Reg. UE 2016/679): dati trattati su server EU, cancellati su richiesta
+- Privacy policy e cookie policy conformi
+- Nessuna cessione dati a venditori di energia
+- AI Act (Reg. UE 2024/1689) art. 50: eventuali strumenti IA interni di supporto all'analisi non costituiscono il parere finale, che resta a cura dei professionisti incaricati
+
+## Contatti
+
+- Form su https://interrogalabolletta.it/
+- Email tecnica: andrea.torresi@torresistudio.it
+- Telefono studio: +39 0733 881000
+
+Ultimo aggiornamento: 2026-10-16.
