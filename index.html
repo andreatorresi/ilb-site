@@ -1910,6 +1910,21 @@ function showStatus(msg, type) {
   }
 }
 </script>
-
-</body>
+    <!-- Chatwoot widget (Beatrice IA) - privacy: imposta cookie 'cw_conversation' solo dopo apertura chat -->
+    <script>
+      (function(d,t) {
+        var BASE_URL="https://chat.torresistudio.it";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.defer=true; g.async=true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: 'R5ZuYXRMds3zp3B14jxjhXgV',
+            baseUrl: BASE_URL
+          });
+        };
+      })(document,"script");
+    </script>
+  </body>
 </html>
