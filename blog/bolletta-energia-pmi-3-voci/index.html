@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#0A0E1A" />
+
+<title>Bolletta energia PMI: 3 voci che nessuno controlla — Interrogalabolletta</title>
+<meta name="description" content="Dispacciamento, oneri di sistema e penali reattiva: 3 voci della bolletta energia che le PMI non controllano. Confesercenti: +50,2% rispetto al 2024." />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://interrogalabolletta.it/blog/bolletta-energia-pmi-3-voci/" />
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Bolletta energia PMI: 3 voci che nessuno controlla" />
+<meta property="og:description" content="Dispacciamento, oneri di sistema e penali reattiva: 3 voci della bolletta che le PMI non controllano." />
+<meta property="og:url" content="https://interrogalabolletta.it/blog/bolletta-energia-pmi-3-voci/" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:site_name" content="Interrogalabolletta" />
+<meta property="article:published_time" content="2026-10-20" />
+<meta property="article:author" content="Andrea Torresi" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Bolletta energia PMI: 3 voci che nessuno controlla" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --notte: #0A0E1A;
+  --acciaio: #1B2845;
+  --acciaio-light: #243456;
+  --marker: #F4D03F;
+  --marker-soft: rgba(244, 208, 63, 0.18);
+  --carta: #F5F5F0;
+  --testo-chiaro: #E5E7EB;
+  --testo-tenue: #9CA3AF;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --container: 780px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--testo-chiaro);
+  background: var(--notte);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(27, 40, 69, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 40, 69, 0.4) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: radial-gradient(ellipse at top, black 30%, transparent 80%);
+}
+main, header, footer { position: relative; z-index: 1; }
+a { color: var(--marker); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.site-header {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(244, 208, 63, 0.08);
+}
+.nav {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--testo-chiaro);
+}
+.logo-mark {
+  width: 32px; height: 32px;
+  background: var(--marker);
+  display: grid; place-items: center;
+  border-radius: 4px;
+  color: var(--notte);
+  font-weight: 900;
+  font-family: var(--font-display);
+}
+.back-link {
+  font-size: 0.875rem;
+  color: var(--testo-tenue);
+}
+.back-link:hover { color: var(--marker); }
+
+article { padding: 3rem 0 4rem; }
+article h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.article-meta {
+  font-size: 0.875rem;
+  color: var(--testo-tenue);
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--acciaio);
+}
+article h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--marker);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+article h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+article p { margin-bottom: 1rem; }
+article strong { color: #fff; }
+article hr {
+  border: none;
+  border-top: 1px solid var(--acciaio);
+  margin: 2rem 0;
+}
+article ul, article ol {
+  margin: 0.5rem 0 1rem 1.5rem;
+}
+article li { margin-bottom: 0.25rem; }
+.cta-box {
+  background: var(--acciaio);
+  border: 1px solid rgba(244, 208, 63, 0.15);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+.cta-box a {
+  display: inline-block;
+  background: var(--marker);
+  color: var(--notte);
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  text-decoration: none;
+}
+.cta-box a:hover { opacity: 0.9; text-decoration: none; }
+.sources {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--acciaio);
+  font-size: 0.85rem;
+  color: var(--testo-tenue);
+}
+.sources h3 { color: var(--testo-tenue); font-size: 0.9rem; }
+.sources ul { list-style: none; margin-left: 0; }
+.sources li { margin-bottom: 0.5rem; padding-left: 1rem; text-indent: -0.5rem; }
+.sources li::before { content: "–"; margin-right: 0.5rem; }
+.sources a { color: var(--testo-tenue); text-decoration: underline; }
+.disclaimer {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: var(--testo-tenue);
+  font-style: italic;
+}
+footer {
+  padding: 2rem 0;
+  border-top: 1px solid var(--acciaio);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--testo-tenue);
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="/" class="logo">
+      <span class="logo-mark">?!</span>
+      Interrogalabolletta
+    </a>
+    <a href="/" class="back-link">&larr; Torna al sito</a>
+  </nav>
+</header>
+
+<main>
+  <article class="container">
+    <h1>Bolletta energia PMI: 3 voci che nessuno controlla</h1>
+    <div class="article-meta">20 ottobre 2026 &middot; Torresi &amp; Associati S.r.l. &middot; 4 min lettura</div>
+
+    <p>La bolletta della tua azienda è corretta? Molte PMI pagano più del dovuto senza saperlo. Secondo Confesercenti, nel 2025 le piccole e medie imprese italiane di commercio, turismo e servizi hanno affrontato un aggravio stimato di <strong>2,6 miliardi di euro</strong> rispetto al 2024, con un prezzo dell'energia superiore del <strong>50%</strong> rispetto a gennaio 2024.</p>
+    <p>In questo contesto, controllare ogni voce della bolletta non è un vezzo: è una necessità. Eppure ci sono tre componenti che quasi nessuno verifica.</p>
+
+    <hr />
+
+    <h2>1. Corrispettivi di dispacciamento e sbilanciamento</h2>
+
+    <h3>Cosa sono</h3>
+    <p>Il dispacciamento è il servizio con cui Terna bilancia in tempo reale domanda e offerta di energia sulla rete. Il costo di questo servizio &mdash; noto come &ldquo;uplift&rdquo; &mdash; viene ribaltato dal fornitore sul cliente finale secondo le clausole contrattuali. Lo sbilanciamento, invece, è lo scostamento tra l'energia programmata dal venditore e quella effettivamente prelevata.</p>
+
+    <h3>Dove trovarli in bolletta</h3>
+    <p>Cercate le voci &ldquo;corrispettivi di dispacciamento&rdquo;, &ldquo;componente di sbilanciamento&rdquo; o diciture simili nella sezione dedicata ai servizi di vendita. Non sempre sono evidenti: alcuni fornitori le accorpano in un'unica riga.</p>
+
+    <h3>Cosa può andare storto</h3>
+    <p>I costi di dispacciamento variano nel tempo e dipendono dalla programmazione del venditore. Se il vostro fornitore commette errori di programmazione &mdash; cioè sovrastima o sottostima i vostri consumi &mdash; il costo dello sbilanciamento lievita, e quel costo può finire in bolletta. ARERA ha più volte richiamato gli operatori al rispetto dei principi di diligenza nella programmazione (delibere 2017-2018). Se notate importi anomali, chiedete al fornitore il dettaglio tra prelievi programmati e prelievi effettivi.</p>
+
+    <hr />
+
+    <h2>2. Oneri di sistema (ASOS e ARIM)</h2>
+
+    <h3>Cosa sono</h3>
+    <p>Gli oneri di sistema finanziano politiche pubbliche: incentivi alle rinnovabili, smantellamento delle ex centrali nucleari, bonus sociale, agevolazioni per le imprese energivore. Si dividono in due componenti: <strong>ASOS</strong> (che finanzia rinnovabili e cogenerazione, pari al 95% degli oneri) e <strong>ARIM</strong> (oneri residui). Secondo i dati ARERA del terzo trimestre 2026, gli oneri di sistema pesano circa il <strong>10,5%</strong> della bolletta del cliente tipo.</p>
+
+    <h3>Dove trovarli in bolletta</h3>
+    <p>Nelle bollette del mercato libero sono spesso indicati come voce unica &ldquo;oneri di sistema&rdquo;, senza distinguere ASOS e ARIM. I valori trimestrali aggiornati sono pubblicati da ARERA sul sito dedicato alle utenze non domestiche.</p>
+
+    <h3>Cosa può andare storto</h3>
+    <p>Gli oneri di sistema sono regolati e uguali per tutti i clienti dello stesso regime. Tuttavia, il fornitore deve applicare le aliquote corrette per la vostra classe di utenza (BT, MT, potenza impegnata). Errori di classificazione o aggiornamenti tardivi delle aliquote comportano importi sbagliati. Inoltre, il <strong>decreto-legge 21/2026</strong> ha previsto una riduzione della componente ASOS per le utenze non domestiche: verificate che il vostro fornitore l'abbia applicata. Se la bolletta non mostra il dettaglio ASOS/ARIM, richiedetelo: è un vostro diritto.</p>
+
+    <hr />
+
+    <h2>3. Penali per energia reattiva</h2>
+
+    <h3>Cosa sono</h3>
+    <p>L'energia reattiva è quella quota di energia che non produce lavoro utile, ma è necessaria al funzionamento di motori, trasformatori e altre apparecchiature. Quando il rapporto tra energia reattiva ed energia attiva supera il <strong>33%</strong> (fattore di potenza cos&phi; di circa 0,95), scattano le penali. Oltre il 75%, le penali raddoppiano.</p>
+
+    <h3>Dove trovarli in bolletta</h3>
+    <p>Cercate la voce &ldquo;penali energia reattiva&rdquo; o &ldquo;eccedenza reattiva&rdquo; nella sezione trasporto. Le penali si applicano solo alle utenze non domestiche in bassa o media tensione con potenza disponibile superiore a 16,5 kW, e solo nelle fasce F1 e F2. I corrispettivi indicativi sono di circa 1,27 centesimi di euro per kvarh in bassa tensione nella fascia 33-75%, e di circa 1,69 centesimi oltre il 75% (valori soggetti ad aggiornamento annuale ARERA, delibera 712/2022/R/eel).</p>
+
+    <h3>Cosa può andare storto</h3>
+    <p>Molte PMI pagano penali per anni senza sapere che basterebbe installare un condensatore di rifasamento &mdash; un investimento che si ripaga in pochi mesi. Inoltre, dal 1 aprile 2023, ARERA conteggia anche l'energia reattiva immessa in rete (non solo quella prelevata): chi ha un impianto fotovoltaico deve verificare che il rifasamento sia adeguato anche in fase di immissione. Infine, controllate che il calcolo sia corretto: il fornitore deve applicare le soglie vigenti (33% e 75%), non quelle precedenti al 2016.</p>
+
+    <hr />
+
+    <h2>Quanto vale un controllo</h2>
+    <p>Un ristorante, un negozio o un laboratorio artigiano con consumi medi può scoprire centinaia di euro all'anno di addebiti evitabili. Non si tratta di cambiare fornitore, ma di leggere la bolletta con gli strumenti giusti.</p>
+
+    <div class="cta-box">
+      <p><strong>Fai verificare la tua bolletta gratuitamente</strong></p>
+      <a href="/verifica">Richiedi verifica</a>
+    </div>
+
+    <div class="sources">
+      <h3>Fonti</h3>
+      <ul>
+        <li>Confesercenti, Ufficio economico, stima gennaio 2025: prezzo energia +50,2% rispetto a gennaio 2024, aggravio di 2,6 miliardi per PMI commercio, turismo e servizi (<a href="https://www.quotidiano.net/economia/ultimaora/piccole-e-medie-imprese-bollette-7d7b2015" rel="nofollow">quotidiano.net</a>; <a href="https://www.9colonne.it/504858/smes-in-italy-facing-2-6-billion-energy-surge-in-2025" rel="nofollow">9colonne.it</a>)</li>
+        <li>ARERA, comunicato aggiornamento Maggior Tutela III trimestre 2026: oneri di sistema al 10,5% della bolletta (<a href="https://www.arera.it/fileadmin/allegati/com_stampa/26/Aggiornamento_Maggior_Tutela_III_trimestre_2026.pdf" rel="nofollow">arera.it</a>)</li>
+        <li>ARERA, delibera 712/2022/R/eel: penali energia reattiva, soglie 33% e 75%, in vigore dal 1 aprile 2023 (<a href="https://informaimpresa.it/item/energia-elettrica-aggiornamento-sulle-penali-applicate-in-caso-di-prelievo-eccesivo-di-energia-reattiva" rel="nofollow">informaimpresa.it</a>)</li>
+        <li>Decreto-legge 21/2026 (convertito in legge 49/2026): riduzione ASOS per utenze non domestiche (<a href="https://www.fiscoetasse.com/normativa-prassi/13554-decreto-bollette-2026-tutti-gli-sconti-su-luce-e-gas-per-famiglie-e-imprese.html" rel="nofollow">fiscoetasse.com</a>)</li>
+        <li>ARERA, delibere 2017-2018 su dispacciamento e sbilanciamento (<a href="https://www.arera.it/fileadmin/allegati/docs/18/109-18.pdf" rel="nofollow">arera.it</a>)</li>
+      </ul>
+    </div>
+
+    <p class="disclaimer">Nota: il dato ARERA del 10,5% si riferisce al cliente tipo domestico vulnerabile in Maggior Tutela. Per le utenze non domestiche la quota può variare in base alla classe di utenza e al regime contrattuale. I corrispettivi delle penali reattiva sono indicativi e soggetti ad aggiornamento annuale.</p>
+
+    <p class="disclaimer">Questo articolo è redatto con il supporto di strumenti di intelligenza artificiale (AI Act, Reg. UE 2024/1689, art. 50). Titolare del trattamento: Andrea Torresi, Torresi &amp; Associati S.r.l., Corso Umberto I, 161, 62012 Civitanova Marche (MC).</p>
+  </article>
+</main>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Interrogalabolletta &mdash; Torresi &amp; Associati S.r.l. | <a href="/privacy.html">Privacy</a> | <a href="/cookie.html">Cookie</a> | <a href="/termini.html">Termini</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
